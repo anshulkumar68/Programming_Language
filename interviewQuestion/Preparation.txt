@@ -1,0 +1,39 @@
+Q. JAVA 8 features ?
+Q. Iterable and iterator ?
+Q. Collections which you are using ?
+Q. How are you creating API ?
+Q. Volatile keyword ?
+Q. How are you handling exception and then returning it to frontend ?
+Q. streamapi, which other features of JAVA you are using
+Q. LinkedList use which linkedList singly or doubly 
+Q. LINkedList and ArrayList
+Q. HashSet and HashMap
+
+TOMCAT SERVER
+Q. Design Pattern(Singleton, Prototype, Abstract factory)
+Q. Spring boot can be used for frontend
+Q. Different levels of logging
+Q. Comparator in java and Comparator in java8
+Q. Runnable
+Q. how to create a thread in java
+Q. how to enanble springboot application.properties
+Q. 201 and 200 error 
+Q. EnableAutoConfiguration annotation 
+Q. Difference between getMapping and RequestMapping 
+
+
+>> Advanced Java
+- Servlets, JSP, JDBC, HIBERNATE FRAMEWORK
+>>Spring framework 
+- Spring Data JPA, JDBC, ORM, AOP, 
+>>Logging framework
+- Log4j, SLF4J
+>> Testing
+- Unit Testing(JUnit, TestNG), Integration Testing(Rest Assured, jMeter), Mocking Framework(Mockito, EasyMock, WireMock)
+
+J2EE, Microservices, Quarkus, Cloud(AWS), Kubernetes, Docker, RESTful API, SDK, Service mesh, Struts, Webservices(SOAPREST), Maven, JSF, SOAP, SDLC, multithreading, rabbitMQ, kafka(new), 
+
+
+JAVA, JAVA8, SQL, SPRING BOOT, ASSERTION, MAVEN,JUNIT, MOCKITO, HOW TO CONNECT DATABASE
+
+

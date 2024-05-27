@@ -1,0 +1,43 @@
+#include<iostream>
+using namespace std;
+void reverse_array(int arr[], int size)
+{
+    int start=0;
+    int end=size-1;
+    while(start<=end)
+    {
+        swap(arr[start], arr[end]);
+        start++;
+        end--;
+    }
+}
+void printArray(int arr[], int size)
+{
+    cout<<"after reverse:"<<endl;
+  for(int i=0; i<size; i++)
+    { 
+        cout<<arr[i]<<" ";
+    }
+}
+
+int main()
+{
+    int arr[100], size, key;
+    cout<<"enter size of array: ";
+    cin>>size;
+    cout<<"enter elements in array: "<<endl;
+    for(int i=0; i<size; i++)
+    {
+        cin>>arr[i];
+    }
+    cout<<"array is: ";
+     for(int i=0; i<size; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<endl;
+    reverse_array(arr, size);
+    printArray(arr, size);
+    
+    return 0;
+}

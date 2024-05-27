@@ -1,0 +1,108 @@
+Que. Why JAVA 8 ?
+Ans- 
+a. Concise and Minimal code
+b. We were missing functional programming benefits in OOPS nature, To utilize functional programming benefits in java, java8 
+c. To enable parallel programming. More compatible code for multi core processors
+
+
+Que. JAVA 8 features ?
+Ans-
+a. Lambda Expression
+b.Base64 encode decoce
+c.Functional Interface
+d.Date and Time API
+e.Static method in interface
+f.method and constructor reference in interface
+g.Optional class
+h.Default method in interface
+
+a. Lambda expressin 
+Lambda expressions are similar to methods, but they do not need a name and they do not need a name and they can be implemented right in the body of a method.
+Example of the Lambda expression is: (x,y) -> x+y
+Ways to optimize the lambda expressions
+a. Remove curly braces for single statement
+b. use type inference , compiler guess the suitation or context.
+c. No return keyword
+d. If single parameter we can remove parenthesis
+
+Benefits of lambda expression
+a. To enable functional programming in java
+b. To make code more readable, maintable and concise code
+c. To enable parallel programming
+d. JAR file size reduction
+e. Elimanation of shadow variables
+
+b. Stream API
+The java.util.stream package in Java 8 introduces a new Streams API
+Stream API used for Bulk Data Operations On Collections
+The Stream API is used to handle a collection of items and allows many iterations
+Streams API that enables you to process components of Java Collections in parallel which fill the void of parallel programming.
+
+c. Base64 encode decode
+Under java.util.Base64 package, Java provides a class Base64 to deal with encryption and decryption, This class provides three different encoders and decoders to encrypt information at each level.
+
+d. Date and Time API
+Under the package java.time , java 8 offers a new date and time API
+
+e. Functional Interface
+An Interface that contains only one abstract method is known as functional interface. It can have any number of default and static methods, Functional interfaces are also known as Single Abstract Method Interfaces (SAM Interfaces).
+
+f. Method reference and Constructor reference
+Java 8 Method reference is used to refer method of functional interface . It is compact and easy form of lambda expression. Each time when you are using lambda expression to just referring a method, you can replace your lambda expression with method reference
+
+g. Default method in interfaces
+until java 1.7 only public abstract methods were allowed whether we declare by writing or not.
+Since JAVA 8 provides a facility to create default methods inside the interface. Methods which are defined inside the interface and tagged with default are known as default methods. These methods are non-abstract methods.
+
+h. Static methods in interfaces
+-> Static methods in interface are those methods which are defined in the interface with the keyword static 
+-> Static method contain the complete definition of the function
+-> cannot be overridden or changed in the implementation class 
+
+i. Optional class, Collection API improvements(Performance Improvement for HashMaps with Key Collisions)
+Java introduced a new class Optional in Java 8. It is a public final class which is used to deal with NullPointerException in Java application. We must import java.util package to use this class. It provides methods to check the presence of value for particular variable.
+
+================================================================================================================================================
+ADVANCED JAVA
+
+Q. Iterable and Iterator ?
+Ans- Iterable=> 
+Iterable interface belongs to the java.lang package. It represents a data structure that can be iterated over.
+The Iterable interface provides a method that produces an Iterator. When using an Iterable, we cannot get an element by index. Similarly, we cannot get the first or the last elements from the data structure as well.
+All collections in Java implement the Iterable interface.
+
+Iterator => 
+Iterator is a member of the Java Collections Framework. It belongs to the java.util package. This interface allows us to retrieve or remove elements from a collection during the iteration.
+In addition, it has two methods that help iterate over the data structure and retrieve its elements – next() and hasNext().
+Moreover, it has a remove() method, which removes the current element pointed to by the Iterator.
+Finally, the forEachRemaining(Consumer<? super E> action) method performs the given action for each remaining element inside the data structure.
+
+Q. Volatile keyword ?
+Ans- The volatile keyword in Java is used to indicate that a variable's value may be modified by multiple threads simultaneously. It ensures that the variable is always read from and written to the main memory, rather than from thread-specific caches, ensuring visibility across threads.
+
+
+================================================================================================================================================
+JDBC, Servlet, JSP
+
+Que. What is JDBC ?
+Ans- JDBC stands for Java Database Connectivity. JDBC is a Java API to connect and execute the query with the database. It is a part of JavaSE (Java Standard Edition). JDBC API uses JDBC drivers to connect with the database. There are four types of JDBC drivers:
+JDBC-ODBC Bridge Driver,
+Native Driver,
+Network Protocol Driver, and
+Thin Driver
+
+We can use JDBC API to access tabular data stored in any relational database. By the help of JDBC API, we can save, update, delete and fetch data from the database.
+
+
+Que. What is the difference between JSP and servlet?
+Ans-
+JSP => JSP stands for Java Server Pages. It is a technology for developing attractive and dynamic web pages in Java. JSP combine HTML, Java code, and JSP tags. The JSP are compiled into Java Servlets and executed on the server side. 
+
+Servlets =>  Servlets are classes in Java that make servers better for hosting web applications that work using a request-response model. They are very important for making Java web applications. It is faster than JSP
+
+
+i)JSP (JavaServer Pages) is a technology that allows embedding Java code into HTML pages, while servlets are Java classes that handle requests and responses on the server-side. Servlets are pure Java, whereas JSP combines Java code and HTML for dynamic web page generation.
+
+ii)JSP is slower than servlet and Servlet faster than JSP
+
+iii) JSP is a combination of HTML and Java and Servlet is pure JAVA

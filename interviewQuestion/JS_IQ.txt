@@ -1,0 +1,186 @@
+Q- What is JavaScript?
+Ans- JavaScript is a high-level, object-oriented and interpreted programming language primarily used for adding interactivity and dynamic behavior to web pages.
+
+Q- What are the key features of JavaScript?
+Ans- Dynamic typing: JavaScript is a dynamically typed language, which means that variables do not need to be declared with a specific data type. The data type of a variable is determined by the value that is assigned to it.
+
+Interpreted: JavaScript is an interpreted language, which means that it is not compiled into machine code before it is executed. Instead, JavaScript code is interpreted by the browser or other runtime environment at the time it is executed.
+
+Object-oriented: JavaScript is an object-oriented language, which means that it supports the concept of objects. Objects are collections of data and functions that act together as a single unit.
+
+Prototype-based object-orientation: is a style of object-oriented programming where classes are not explicitly defined. Instead, classes are derived by adding methods and properties to an empty object 
+
+Functions as first-class objects: This means that functions can be treated like any other data type, such as numbers, strings, or objects. Functions can be assigned to variables, passed as arguments to other functions, and returned from functions.
+undefined means a variable has been declared but has not yet been assigned a value, while null is an assignment value representing a deliberate absence of any value.
+
+Q- How JS works behind the scene ?
+Ans-  
+1. Parsing - When a browser encounters a JavaScript code block. The parser breaks down the code into tokens and creates a syntax tree(also known as abstract syntax tree or AST).
+2. Comilation & Execution - JS engine compiles the code into executable machine code using JIT compilation. The compiled code is then executed line by line, following the order of statements in the code.
+3. Execution context - Environment in which a piece of js is executed. Stores all the necessary information for some code to be executed.
+It consist of Variable environment, Scope chain and This keyword.
+These execution contexts are organized in a stack known as CALL STACK.
+4. Event loop and Asynchronous Execution- JS is single threaded or synchronous, meaning it can only execute one operation at a time. 
+However, JavaScript also has a number of asynchronous features, such as callbacks, promises, and async/await, which is possible because of an EVENT LOOP mechanism. It keeps looking for task in the task queue and executes them when the call stack is empty. These features allow JavaScript code to run in the background without blocking the main thread
+5. Memory Management- JS engine have built-in garbage collectors that automatically manage memory allocation and deallocation and leds memory optimization.
+
+Q- What is the event loop in JavaScript and how does it work?
+Ans- The event loop is a mechanism in JavaScript that allows asynchronous operations to be executed in a non-blocking manner by handling callbacks from the callback queue when the call stack is empty.
+
+
+Q. What are the different data types present in javascript?
+Ans-
+1. Primitive types => Primitive data types can store only a single value
+String: Represents a sequence of characters. For example, "hello".
+Number: Represents numeric values. For example, 100.
+BigInt: Represents integers with arbitrary magnitude.
+Boolean: Represents a boolean value, either false or true.
+Undefined: Represents an undefined value.
+Null: Represents no value at all.
+Symbol: Represents a unique value that can be used as an identifier or key in objects.
+2. Non-Primitive types => To store multiple and complex values, non-primitive data types are used.
+Example: Objects
+
+
+Q. Explain Hoisting in javascript.
+Ans-Hoisting is the default behaviour of javascript where all the variable and function declarations are moved on top.
+Example:
+a=1;
+alert('a='+a);
+var a;
+Note - Variable initializations are not hoisted, only variable declarations are hoisted:
+Note - To avoid hoisting, you can run javascript in strict mode by using “use strict” on top of the code:
+
+
+Q- What is the difference between == and === in JavaScript?
+Ans- == is the equality operator, which performs type coercion before comparing two values, while === is the strict equality operator, which checks for both value and datatype equality without type coercion.
+
+
+Q- What is the difference between let, const, and var?
+Ans- var is function-scoped and can be redeclared and reassigned from the very beginning var keyword is in usage,
+let is block-scoped and can be reassigned but not redeclared.
+const is also block-scoped but cannot be reassigned or redeclared.
+
+
+Q- type conversion and type coercion
+Ans-  These  two concepts related to how JavaScript handles data types
+Type conversion in JavaScript is the explicit conversion of a value from one data type to another Ex. Number("10"), String(), Boolean()
+Type coercion, on the other hand, is the implicit conversion of values during evaluation of expressions
+
+
+Q- Truthy and falsy values
+Ans- Values that are considered truthy will evaluate to true when coerced to a boolean. These include:
+Non-empty strings ("hello", "0")
+Non-zero numbers (e.g., 1, -1)
+Objects (including arrays and functions)
+true
+
+Values that are considered falsy will evaluate to false when coerced to a boolean. These include:
+Empty strings ("")
+Zero (0) and negative zero (-0)
+null
+undefined
+NaN (Not a Number)
+false
+
+
+Q- Dot vs bracket notation in object
+Ans-  Dot notation and bracket notation are used to access properties of objects, but they have some differences in their usage.
+Dot notation is the simpler and more commonly used method for accessing object properties. It involves accessing properties using the dot (.) operator followed by the property name
+
+Bracket notation allows you to access object properties using square brackets ([]) and providing the property name as a string. This notation is more flexible as it allows you to access properties dynamically
+
+Q6- Destructuring arrays  ES6
+Ans- Destructuring in JavaScript allows you to extract/unpack values from arrays and objects, making your code more expressive.
+
+Q7- The spread operator(...)  ES6
+Ans- Right side of "=" operator
+spread operator is about expanding iterables or making copies of them.
+
+Q8- Rest pattern(...)  ES6
+Ans- Left side of "=" operator
+Rest operator allows you to collect multiple elements into a single array
+
+Q9. Short circuiting (&& and ||) ES6
+Ans- where evaluation of an expression stops as soon as the outcome is determined based on the initial part of the expression, without needing to evaluate the entire expression
+
+Q10. Nullish Coalescing Operator (??)  ECMA2020
+Ans-  It provides a concise way to handle default values for cases where a variable might be null or undefined, but not for other falsy values like 0 or ''.
+
+Q11- Optional chaining    ES2020
+Ans- It allows you to safely access nested properties of an object without having to explicitly check if each property exists
+
+Q12- map() method
+Ans-  Iterates over each element of the array, applies a function to each element, and returns a new array with the results of applying the function to each element.
+
+Q13- filter() method
+Ans-  Iterates over each element of the array, applies a filtering condition to each element, and returns a new array containing only the elements that satisfy the filtering condition.
+
+Q14- reduce() method
+Ans- Iterates over each element of the array, applies a function that accumulates a single value from the elements of the array, and returns the accumulated value.
+
+
+Q16- What are the differences between undefined and null?
+Ans- undefined means a variable has been declared but has not yet been assigned a value, whereas null is an assignment value, meaning that a variable has been declared and given the value of null
+
+Q18- What is the scope in JavaScript?
+Ans- Scope refers to the accessibility of variables, functions, and objects in particular parts of your code during runtime.
+
+Q19- What are closures and how do you use them?
+Ans- Closures are functions that have access to the outer (enclosing) function's variables, even after the outer function has finished executing. They are used for data encapsulation and maintaining state.
+
+Q20- Explain the event bubbling and event capturing in JavaScript.
+Ans- Event bubbling and capturing are two ways of event propagation in the DOM. In event bubbling, the event starts at the innermost target element and works its way up the DOM tree, while in event capturing, the event starts at the outermost element and moves towards the target element.
+
+Q21- What is the purpose of the this keyword in JavaScript?
+Ans- The this keyword refers to the object to which a method belongs, Its value depends on the context in which it is used.
+
+
+Q23- Explain the concept of prototype in JavaScript.
+Ans- Prototypes are a way to implement inheritance in JavaScript, where objects can inherit properties and methods from other objects.
+
+Q24- What are some ways to handle asynchronous operations in JavaScript?
+Ans- Promises, async/await, and callback functions are common ways to handle asynchronous operations in JavaScript.
+
+
+Q27- Explain the concept of promises in JavaScript.
+Ans- Promises are objects representing the eventual completion or failure of an asynchronous operation. They allow you to handle asynchronous operations more easily by chaining .then() and .catch() methods.
+
+Q28- Explain the difference between arrow functions and regular functions in JavaScript.
+Ans- Arrow functions have a concise syntax making them useful in writing one-line blocks of code whereas Regular functions are better at handling logic that requires multiple expressions.
+
+Q29- What is a closure? Can you give an example of how you might use one?
+Ans- A closure is a function that has access to its outer function's scope even after the outer function has finished executing. An example could be creating a counter function using closure to maintain its state.
+
+Q30- How does JavaScript handle inheritance?
+Ans- JavaScript uses prototypal inheritance, where objects can inherit properties and methods from other objects through their prototype chain.
+
+Q31- What is the difference between localStorage and sessionStorage?
+Ans- localStorage stores data with no expiration date, while sessionStorage stores data for one session only, meaning the data is cleared when the session ends.
+
+Q32- What is lazy loading ?
+Ans- Lazy loading is a technique of delaying non-essential resources (such as images, scripts, or stylesheets) until they are needed. This helps to improve the initial loading time and overall performance of a web page.
+
+Q33- How can you optimize the performance of a website/application built with JavaScript?
+Ans- Performance optimization techniques include minimizing HTTP requests, using asynchronous loading for resources, optimizing images and media, minimizing and optimizing JavaScript code, using caching strategies, and implementing lazy loading.
+
+3.what is scope and types of scope
+4.through js append the value to div
+5.apply filter method
+6.innerHTML
+7.what is event and different types of event in JS
+8.how to handle error in js
+9.what is promise
+10.what is closure
+11.Callback function and its use
+12.Event Loop
+13.AJAX
+14. Difference between null and undefined
+15.New feature of ES6
+16.Arrow function and Normal function
+17.will arrow function get hoisted or not
+18. this keyword
+19.high order function
+
+
+

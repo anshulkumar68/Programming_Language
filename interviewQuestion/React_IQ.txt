@@ -1,0 +1,85 @@
+Q. What is React JS ?
+Ans- React is a free and open-source front-end JavaScript library for building user interfaces based on components
+React is a JavaScript library created for building fast and interactive user interfaces for web and mobile applications.
+
+Q. Problems with JS ?
+Ans-
+React has a simpler mental model
+JS is cumbersome
+JS don't provide Reusable Components
+JS is Imperative where developer need to define how" to do things step-by-step
+
+Q. Features of react 
+Ans- No need to worry about querying and updating DOM
+React creates a web page with small and reusable components
+React will take care of creating and updating DOM elements
+React is declarative where developer describe what the UI should look like for a given state.
+
+Q. what is components ?
+Ans- Components are the building blocks of the user interface. They allow developers to break down the UI into reusable, independent pieces
+Components can be either class components or functional components
+1) Functional component
+> These are simple JavaScript functions that return JSX (JavaScript XML), which describes what the UI should look like. They can accept props as an argument and return React elements
+> React Hooks can be used in functional components to handle state and lifecycle methods, making them more powerful and flexible.
+2) Class component
+> React Hooks can be used in functional components to handle state and lifecycle methods, making them more powerful and flexible.
+> )Class components were the only way to use state and lifecycle methods before Hooks were introduced in React 16.8.)
+
+Q. What is State ?
+Ans- ) State is a special object that holds data that may change over the component's lifetime.
+) Functional components use the useState Hook to manage state, while class components use this.state and this.setState.
+
+Q. What is Lifecycle Method 
+Ans- ) Lifecycle methods are special methods in class components that allow you to run code at specific points in a component's lifecycle, such as when it mounts, updates, or unmounts
+) With Hooks, functional components can achieve similar behavior using useEffect.
+
+Q. What is JSX ?
+Ans- ) It determines how the UI will look wherever the component is used
+) JSX get converted to regular JS
+) Babeljs.io/repel is a JS compiler that transforms JSX into plain JavaScript. Babel processes your code and converts the JSX syntax into React.createElement calls.
+
+Q. What is Fragments ?
+Ans- ) Allows grouping of multiple elements without extra DOM nodes
+) Return multiple elements without a wrapping parent which also provides cleaner DOM
+) Two syntax 
+a) <React.Fragment>....</React.Fragment>
+b) <>...</>
+
+Q. What is props and ways of passing data to props ?
+Ans- ) Props (short for properties) are read-only attributes(immutable) used to pass data and event handlers from a parent component to a child component.
+) Examples of using Props
+a) Passing Multiple Props
+b) Passing Function as Props
+c) Destructuring Props 
+
+Q. Passing Components as children ?
+Ans- ) In React, passing components as children is a common pattern that allows you to compose components in a flexible and reusable way. Here’s an example to illustrate how you can pass components as children and manage them within the parent component.
+) Accessed with props.children
+) Enhances Reusability, Composition, Flexibility
+
+Q. Handling events ?
+Ans- React provides a way to handle user interactions like clicks, form submissions, key presses, and more using event handlers
+) React events use camelCase. Eg.onClick
+) Uses Synthetic events, not direct browser events
+) Use onChange for controlled form inputs
+
+Q. Passing Functions via props ?
+Ans- This allows a parent component to pass a function down to a child component, which can then call the function to trigger an action or update the state in the parent
+) Enables upward communication from child to parent
+) Commonly used for event Handling
+) Parent defines a function, child invokes it
+
+
+virtual DOM and actual DOM
+2.Features of React
+3.JSX
+4.can our browser directly understand JSX  => No, browsers can't understand JSX code. You need a transpiler to convert your JSX to regular Javascript that browsers can understand. The most widely used transpiler right now is Babel.
+5.webpack
+6.Lifecycle component in react
+7.unmount
+8.refs and props
+9.control and uncontrol component
+10.High order function
+11.state and props
+12.router
+13.server side rendering
