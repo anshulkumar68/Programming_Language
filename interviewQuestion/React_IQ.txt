@@ -1,3 +1,8 @@
+Q. Difference between library and Framework ?
+Ans- Library: . It provides specific functionality that can be called upon when needed.
+
+Framework: It includes libraries, tools, guidelines and best practices to structure the development process.
+
 Q. What is React JS ?
 Ans- React is a free and open-source front-end JavaScript library for building user interfaces based on components
 React is a JavaScript library created for building fast and interactive user interfaces for web and mobile applications.
@@ -14,6 +19,32 @@ Ans- No need to worry about querying and updating DOM
 React creates a web page with small and reusable components
 React will take care of creating and updating DOM elements
 React is declarative where developer describe what the UI should look like for a given state.
+
+Q. Explain "import React from 'react'" ?
+Ans- This line imports the core React library, which is necessary to use JSX syntax and create React components.
+
+Q. Explain "import ReactDOM from 'react-dom/client'"?
+Ans- This line imports the ReactDOM library specifically for creating and managing the DOM nodes.
+
+Q. Explain "ReactDOM.createRoot(document.getElementById('root')).render"?
+Ans- ) ReactDOM.createRoot: This method creates a root React node that can manage the rendering of React components.
+) document.getElementById('root'): This selects the HTML element with the id of root where the React app will be mounted.
+) render: This method is called to render the specified React elements into the root node.
+
+Q. Explain "<React.StrictMode>"?
+Ans- ) React.StrictMode: A wrapper component that helps in identifying potential problems in the application. It does not render any UI itself but activates additional checks and warnings for its descendants.
+
+Q. What is Virtual DOM or ReactDOM ?
+Ans- ) React creates a in-memory structure called the virtual DOM
+) It's a lightweight representation where each node stands for a component and it's attributes.
+
+) NOTE: React uses a DIFFING algorithm to compare the new virtual DOM tree with the previous one. 
+
+Q. What is Reconciliation Process ?
+Ans- ) When component data changes, React updates the virtual DOM's state to mirror these changes
+) React then compares the current and previous versions of the virtual DOM
+) It identifies the specific nodes that need updating
+) Only these nodes are updated in the real browser DOM, making it efficient.
 
 Q. what is components ?
 Ans- Components are the building blocks of the user interface. They allow developers to break down the UI into reusable, independent pieces
