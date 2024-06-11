@@ -102,8 +102,16 @@ Ans- This allows a parent component to pass a function down to a child component
 
 ) ----------------------------------------------HOOKS-------------------------------------
 
+Q. What is useState()?
+Ans- useState is a hook that lets you add state to functional components. It returns an array with two elements: the current state value and a function to update that state.
+
+Eg- const [state, setState] = useState(initialState);
+)state is the current state value.
+)setState is the function that lets you update the state.
+)initialState is the initial value of the state.
+
 Q. What is useRef ?
-Ans- It is a powerful tool that allows you to create a reference for a DOM element which persist across renders withour causing a re-render when it changes.
+Ans- It is a powerful tool that allows you to create a reference for a DOM element which persist across renders without causing a re-render when it changes.
 
 Example) 
 function MyComponent() {
@@ -131,6 +139,28 @@ Ans- The useReducer hook is an alternative to useState for managing state in a c
 )) const [state, dispatch] = useReducer(reducer, initialState);
 
 reducer: A function that determines changes to an application's state. It uses the state and action to compute the new state.
+
+Q. What is useEffect() ?
+Ans- )In function-based components, useEffect handles side effects like data fetching, event listeners and timers.
+)useEffect runs automatically after every render by default.
+)By providing a dependency array, useEffect will only run when specified variables change. An empty array means the effect runs once
+) Multiple useEffect hooks can be used in a single component for organizing different side effects separately
+) Returning a function from useEffect, helps to cancel requests for event listeners, canceling network requests, or clearing timeouts/intervals.
+
+Q. What is useCallback() ?
+Ans- ) The useCallback hook in React is used to memoize callback functions to prevent unnecessary re-renders. This can be particularly useful when passing functions to optimized child components that rely on reference equality to prevent re-renders.
+) Recreates the function only when specific dependencies array change
+Eg.) const memoizedCallback = useCallback(() => {
+  // Your callback logic here
+}, [dependencies]);
+
+Q. What is useMemo() ?
+Ans- ) Expensive Computations: useMemo caches the result of expensive calculations to avoid re-render
+) Derived Data: It only re-computes the memoized value when one of the dependencies array changed.
+) Optimizing Performance: Use useMemo to optimize the performance of your components by avoiding unnecessary computations and re-renders.
+) Comparison with useCallback: While useCallback memoizes functions, useMemo memoizes values or results of functions.
+
+Eg.) const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 
 -----------------------------------------------------------------------------------------
 virtual DOM and actual DOM
