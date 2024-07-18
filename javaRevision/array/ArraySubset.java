@@ -10,7 +10,6 @@ public class ArraySubset {
             System.out.println("arr2 is subset of arr1");
         else
             System.out.println("arr2 is not subset of arr1");
-        
     }
 
     static boolean subset(int[] arr1, int[] arr2){

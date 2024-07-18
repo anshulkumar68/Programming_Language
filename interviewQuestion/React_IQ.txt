@@ -1,5 +1,5 @@
 Q. Difference between library and Framework ?
-Ans- Library: . It provides specific functionality that can be called upon when needed.
+Ans- Library: It provides specific functionality that can be called upon when needed.
 
 Framework: It includes libraries, tools, guidelines and best practices to structure the development process.
 

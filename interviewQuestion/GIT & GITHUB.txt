@@ -1,4 +1,5 @@
-git init  (Initializes a new Git repository in the current directory.)
+v  
+ git init  (Initializes a new Git repository in the current directory.)
 git status (Shows the status of changes as untracked, modified, or staged in your working directory. It helps you understand the state of your repository.)
 git remote add origin (Associates a remote repository with your local Git repository. The term "origin" is a common convention for the default remote name, but you can choose a different name.)
 git branch (Lists all local branches in your repository. The currently active branch is usually marked with an asterisk.)
