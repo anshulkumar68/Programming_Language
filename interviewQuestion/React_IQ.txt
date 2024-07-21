@@ -102,8 +102,16 @@ Ans- This allows a parent component to pass a function down to a child component
 
 ) ----------------------------------------------HOOKS-------------------------------------
 
+Q. What is useState()?
+Ans- useState is a hook that lets you add state to functional components. It returns an array with two elements: the current state value and a function to update that state.
+
+Eg- const [state, setState] = useState(initialState);
+)state is the current state value.
+)setState is the function that lets you update the state.
+)initialState is the initial value of the state.
+
 Q. What is useRef ?
-Ans- It is a powerful tool that allows you to create a reference for a DOM element which persist across renders withour causing a re-render when it changes.
+Ans- It allows you to create a reference for a DOM element which persist across renders without causing a re-render when it changes.
 
 Example) 
 function MyComponent() {
@@ -132,7 +140,85 @@ Ans- The useReducer hook is an alternative to useState for managing state in a c
 
 reducer: A function that determines changes to an application's state. It uses the state and action to compute the new state.
 
------------------------------------------------------------------------------------------
+Q. What is useEffect() ?
+Ans- )In function-based components, useEffect handles side effects like data fetching, event listeners and timers.
+)useEffect runs automatically after every render by default to avoid that need to specify an empty array
+)By providing a dependency array, useEffect will only run when specified variables change. An empty array means the effect runs once
+) Multiple useEffect hooks can be used in a single component for organizing different side effects separately
+) Returning a function from useEffect, helps to cancel requests for event listeners, canceling network requests, or clearing timeouts/intervals.
+
+Q. What is useCallback() ?
+Ans- ) The useCallback hook in React is used to memoize callback functions to prevent unnecessary re-renders. This can be particularly useful when passing functions to optimized child components that rely on reference equality to prevent re-renders.
+) Recreates the function only when specific dependencies array change
+Eg.) const memoizedCallback = useCallback(() => {
+  // Your callback logic here
+}, [dependencies]);
+
+Q. What is useMemo() ?
+Ans- ) Expensive Computations: useMemo caches the result of expensive calculations to avoid re-render
+) Derived Data: It only re-computes the memoized value when one of the dependencies array changed.
+) Optimizing Performance: Use useMemo to optimize the performance of your components by avoiding unnecessary computations and re-renders.
+) Comparison with useCallback: While useCallback memoizes functions, useMemo memoizes values or results of functions.
+
+Eg.) const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+----------------------------------------------REACT-ROUTER-------------------------------------
+
+Q. What is React Router ?
+Ans- React Router is a powerful library for handling navigation and routing in React applications. It allows you to define routes in your app and navigate between different components based on the URL. 
+Installation: Use npm install react-router-dom
+
+Q. What is BroweserRouter ?
+Ans- Introduced in v5, BrowserRouter is the standard router component that uses the HTML5 history API to keep your UI in sync with the URL
+Ex)  <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+
+Q. What is RouterProvider ?
+Ans- Introduced in v6, It’s a more powerful and flexible way to configure your router. Instead of wrapping your routes directly in BrowserRouter, you configure your routes separately and pass them to RouterProvider as prop (createBrowserRouter)
+) createBrowserRouter: helps creating the mapping for router provider.
+
+Ex) const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+    children : [
+      path: '/',
+      element: </About>
+    ]
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
+
+Q. Layout routes
+Ans- 1. Layout Routes help us to use shared elements
+2. Outlet component is used to render the children at the nested routes
+
+Q. Data fetching using loader ?
+Ans- 1. Loader method can be used to load data before a particular route is executed.
+2. The loader method must return the data that is loaded or promise.
+3. Data is available in component and all the child components.
+4. useLoaderData hook can be used to get the fetched data.
+5. Loading state can also be used. 
+
+Q. What is action in react router ?
+Ans- 1. Actions provide a way to handle form submissions and other user actions before the route changes
+2. Custom Form component need to be used along with name attribute for all inputs
+3. Action function will get an data object. To generate correct request object method=“post” attribute should be used.
+4. Data.request.formData() method can be used to get form data Object.
+5. Object.fromEntries(formData) can be used to get actual input data.
+6. redirect() response can be returned for navigation after submission.
+
+----------------------------------------------REDUX----------------------------------------------
+
+
+
+-------------------------------------------------------------------------------------------------
 virtual DOM and actual DOM
 2.Features of React
 3.JSX

@@ -2,7 +2,7 @@ package array;
 
 public class Fibonacci {
     public static void main(String[] args) {
-        fib(8);
+        fib(10);
     }
 
     static void fib(int num) {

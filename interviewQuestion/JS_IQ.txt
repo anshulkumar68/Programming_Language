@@ -1,12 +1,19 @@
 Q) What is JavaScript?
-Ans- JavaScript is a high-level, object-oriented and interpreted programming language primarily used for adding interactivity and dynamic behavior to web pages.
+Ans-
+=> JavaScript is a high-level, object-oriented and interpreted programming language primarily used for adding interactivity and dynamic behavior to web pages.
+=> JavaScript is a popular web scripting language and is used for client-side and server-side development. The JavaScript code can be inserted into HTML pages that can be understood and executed by web browsers while also supporting object-oriented programming abilities.
 
 Q- What are the key features of JavaScript?
-Ans- Dynamic typing: JavaScript is a dynamically typed language, which means that variables do not need to be declared with a specific data type. The data type of a variable is determined by the value that is assigned to it.
+Ans-
+=> Lightweight, interpreted programming language
+=> Cross-platform compatible
+=> Open-source
 
-Interpreted: JavaScript is an interpreted language, which means that it is not compiled into machine code before it is executed. Instead, JavaScript code is interpreted by the browser or other runtime environment at the time it is executed.
+=> Dynamic typing: JavaScript is a dynamically typed language, which means that variables do not need to be declared with a specific data type. The data type of a variable is determined by the value that is assigned to it.
 
-Object-oriented: JavaScript is an object-oriented language, which means that it supports the concept of objects. Objects are collections of data and functions that act together as a single unit.
+=> Interpreted: JavaScript is an interpreted language, which means that it is not compiled into machine code before it is executed. Instead, JavaScript code is interpreted by the browser or other runtime environment at the time it is executed.
+
+=> Object-oriented: JavaScript is an object-oriented language, which means that it supports the concept of objects. Objects are collections of data and functions that act together as a single unit.
 
 Prototype-based object-orientation: is a style of object-oriented programming where classes are not explicitly defined. Instead, classes are derived by adding methods and properties to an empty object 
 Functions as first-class objects: This means that functions can be treated like any other data type, such as numbers, strings, or objects. Functions can be assigned to variables, passed as arguments to other functions, and returned from functions.
@@ -31,13 +38,14 @@ Ans- The event loop is a mechanism in JavaScript that allows asynchronous operat
 Q) What are the different datatypes present in javascript?
 Ans-
 1. Primitive types => Primitive data types can store only a single value
-String: Represents a sequence of characters. For example, "hello".
-Number: Represents numeric values. For example, 100.
+Boolean - For true and false values
+Null - For empty or unknown values
+Undefined - For variables that are only declared and not defined or initialized
+Number - For integer and floating-point numbers
+String - For characters and alphanumeric values
 BigInt: Represents integers with arbitrary magnitude.
-Boolean: Represents a boolean value, either false or true.
-Undefined: Represents an undefined value.
-Null: Represents no value at all.
-Symbol: Represents a unique value that can be used as an identifier or key in objects.
+Symbols - For unique identifiers for objects
+
 2. Non-Primitive types => To store multiple and complex values, non-primitive data types are used.
 Example: Objects
 
@@ -47,7 +55,7 @@ Ans- Promises are objects representing the eventual completion or failure of an 
 Promise is ceated using "Promise" constructor which takes 2 parameter resolve and reject. we call resolve(value) if when the asynchronous task completes successfully, else reject() if fails.
 
 Q) What is strict mode ?
-Ans- =>“use strict” is not a statement but a literal expression
+Ans- =>  strict mode is a way to opt in to a restricted variant of JavaScript
 => It instructs the browser to use the strict mode
 => It stops using implicitly declared variables.
 => It helps developers to write mode secure and efficient code by catching common mistakes and potential bug
@@ -85,16 +93,90 @@ JavaScript helps in making the UI of web applications look and feel much better.
 =>Frameworks
 JavaScript has countless frameworks and libraries that are extensively used for developing web applications and games of all kinds.
 
+Q) Define a named function in JavaScript
+Ans- In JS, a named function is a function that has a name specified while declarations of the function. It helps to improve code redability, makes it easier to identify and calling the function elsewhere in your code.
+
+=> Keyword function: This is used to define a new function.
+=> Function Name (greet): The name of the function, which is used to call it later in the code.
+=> Parameters (name): A list of parameters that the function accepts, enclosed in parentheses. In this example, the function accepts a single parameter, name.
+=> Function Body: The code block inside curly braces {} that contains the logic of the function. This is where you define what the function does. In this example, it returns a greeting message.
+
+Q) What are undeclared and undefined variables?
+Ans- 
+=>Undeclared variables
+Undeclared variables are variables that have not been declared using var, let, or const before they are used in the code. Accessing an undeclared variable will result in a ReferenceError. 
+
+=>Undefined variables
+Undefined variables are variables that have been declared but have not been assigned a value. When you declare a variable but do not initialize it with a value, its default value is undefined.
+
+Q) What is Type conversion(typecasting) and type coercion
+Ans-  These  two concepts related to how JavaScript handles data types
+Type conversion in JavaScript is the explicit conversion of a value from one data type to another Ex. Number("10"), String(), Boolean(), parseInt(), parseFloat()
+Type coercion, on the other hand, is the implicit conversion of values during evaluation of expressions
+
+Q) Explain the difference between arrow functions and regular functions in JavaScript.
+Ans- 
+=> Regular function
+Regular functions are defined using the function keyword and can have a named or anonymous form.
+Regular functions has their own this keyword
+
+=> Arrow functions
+Arrow functions are defined using the => syntax and are always anonymous. They are more concise, especially use for simple operations.
+Arrow functions do not have their own this but inherit it from the surrounding context where they are defined.
+
+Q) Explain this keyword ?
+Ans-  In JavaScript, the this keyword refers to the object that is currently executing the function. The value of this is determined by how the function is called, not where it is defined.
+this behaves different under different contexts
+=> Global Context
+In the global execution context (outside of any function), this refers to the global object. In a web browser, the global object is window.
+
+=> Object Method
+When a function is called as a method of an object, this refers to the object that owns the method.
+
+=> Constructor Function
+In a constructor function, this refers to the newly created object that is being initialized.
+
+=> Event Handlers
+In event handlers, this refers to the DOM element that received the event.
+
+Q) How to handle exceptions in JavaScript?
+Ans- Handling exceptions in JS is crucial for robust and error-resistent application. It provides mechanisms to catch and handle errors, preventing application from crashing.
+
+Key Concepts in Exception Handling
+=> try...catch Statement
+It allow us to handle expections in our code. It allows you to execute code in `try` block and catch any errors in `catch` block 
+
+=> finally Block
+the `finally` block is optional, contains code that will always execute block of code regardless of whether an error occured in `try` block 
+=> throw Statement
+the `throw` statement allows you to create your own errors, that you can throw in any expressions such as String, Number or an instance of error Object
+
+=> Custom Error Handling
+You can create error types by extending the built-in error class. This can be useful for creating more specific error handling in your applications.
+
+Q) What is event bubbling in JavaScript?
+Ans- Event bubbling is a concept in JS that describes how the event propagate throught the DOM tree. When an event occurs on an element it first triggers on that specific element and then bubble up through the ancestors element of DOM eventually reaching to the root element of the DOM.
+
+Q) Explain higher-order functions in JavaScript ?
+Ans- A higher-order function is a function that either takes one or more functions as arguments, or
+Returns a function as its result.
+This concept allows for more abstract and flexible code, enabling functions to be composed, reused, and manipulated in powerful ways.
+
+Q) What is callback functions ?
+Ans- A callback is a function that is passed as an argument to another function. The receiving function is responsible for executing the callback function at a specific point in its execution
+used for handle asynchronous operation
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q. Explain Hoisting in javascript.
-Ans-Hoisting is the default behaviour of javascript where all the variable and function declarations are moved on top.
+Ans-
+=> Hoisting is the default behaviour of javascript where all the variable and function declarations are moved on top.
+Note - Variable initializations are not hoisted, only variable declarations are hoisted
+Note - To avoid hoisting, you can run javascript in strict mode by using “use strict” on top of the code
+
 Example:
 a=1;
 alert('a='+a);
 var a;
-Note - Variable initializations are not hoisted, only variable declarations are hoisted:
-Note - To avoid hoisting, you can run javascript in strict mode by using “use strict” on top of the code:
 
 
 Q- What is the difference between == and === in JavaScript?
@@ -105,12 +187,6 @@ Q- What is the difference between let, const, and var?
 Ans- var is function-scoped and can be redeclared and reassigned from the very beginning var keyword is in usage,
 let is block-scoped and can be reassigned but not redeclared.
 const is also block-scoped but cannot be reassigned or redeclared.
-
-
-Q- type conversion and type coercion
-Ans-  These  two concepts related to how JavaScript handles data types
-Type conversion in JavaScript is the explicit conversion of a value from one data type to another Ex. Number("10"), String(), Boolean()
-Type coercion, on the other hand, is the implicit conversion of values during evaluation of expressions
 
 
 Q- Truthy and falsy values
@@ -199,6 +275,7 @@ Ans- Lazy loading is a technique of delaying non-essential resources (such as im
 
 Q33- How can you optimize the performance of a website/application built with JavaScript?
 Ans- Performance optimization techniques include minimizing HTTP requests, using asynchronous loading for resources, optimizing images and media, minimizing and optimizing JavaScript code, using caching strategies, and implementing lazy loading.
+
 
 
 
