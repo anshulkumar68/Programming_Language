@@ -1,4 +1,4 @@
-package array;
+package javaPractice.ARRAY;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -35,18 +35,17 @@ public class Frequency {
             System.out.println(element + " : " + frequencyMap.get(element));
     }
 
-    static void frequency3(int[] arr){
+    static void frequency3(int[] arr) {
         HashMap<Integer, Integer> map = new HashMap<>();
-        for(int ele : arr){
-            if(map.containsKey(ele))
+        for (int ele : arr) {
+            if (map.containsKey(ele))
                 map.put(ele, map.get(ele) + 1);
-            else    
+            else
                 map.put(ele, 1);
         }
         // print frequency
         System.out.println("Element : Frequency");
-        for(int ele : map.keySet())
+        for (int ele : map.keySet())
             System.out.println(ele + " : " + map.get(ele));
     }
 }
- 

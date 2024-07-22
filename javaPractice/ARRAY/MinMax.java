@@ -1,4 +1,4 @@
-package array;
+package javaPractice.ARRAY;
 
 public class MinMax {
     public static void main(String[] args) {
@@ -24,4 +24,5 @@ public class MinMax {
         }
         return max;
     }
+
 }
