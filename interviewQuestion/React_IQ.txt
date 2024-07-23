@@ -1,29 +1,32 @@
-Q. Difference between library and Framework ?
+Q) Difference between library and Framework ?
 Ans- Library: It provides specific functionality that can be called upon when needed.
 
 Framework: It includes libraries, tools, guidelines and best practices to structure the development process.
 
-Q. What is React JS ?
-Ans- React is a free and open-source front-end JavaScript library for building user interfaces based on components
-React is a JavaScript library created for building fast and interactive user interfaces for web and mobile applications.
+Q) What is React JS ?
+Ans- React is free and open-source front-end JS library created for building fast and interactive user interface for web application using reusable components
 
-Q. Problems with JS ?
+Q) Problems with JS ?
 Ans-
 React has a simpler mental model
 JS is cumbersome
 JS don't provide Reusable Components
 JS is Imperative where developer need to define how" to do things step-by-step
 
-Q. Features of react 
-Ans- No need to worry about querying and updating DOM
+Q) Features of react 
+Ans- 
 React creates a web page with small and reusable components
-React will take care of creating and updating DOM elements
+React uses a virtual DOM to improve performance. Instead of directly manipulating the DOM
 React is declarative where developer describe what the UI should look like for a given state.
+React uses JSX syntax extension that looks similar to HTML that allows us to write HTMl element in JS and increase the code readibility and writability.
 
-Q. Explain "import React from 'react'" ?
+Q) Explain export  ?
+Ans- For allowing the other components to import it using "import statement" and use it.
+
+Q) Explain "import React from 'react'" ?
 Ans- This line imports the core React library, which is necessary to use JSX syntax and create React components.
 
-Q. Explain "import ReactDOM from 'react-dom/client'"?
+Q) Explain "import ReactDOM from 'react-dom/client'"?
 Ans- This line imports the ReactDOM library specifically for creating and managing the DOM nodes.
 
 Q. Explain "ReactDOM.createRoot(document.getElementById('root')).render"?
@@ -50,27 +53,46 @@ Q. what is components ?
 Ans- Components are the building blocks of the user interface. They allow developers to break down the UI into reusable, independent pieces
 Components can be either class components or functional components
 1) Functional component
-> These are simple JavaScript functions that return JSX (JavaScript XML), which describes what the UI should look like. They can accept props as an argument and return React elements
-> React Hooks can be used in functional components to handle state and lifecycle methods, making them more powerful and flexible.
+=> These are simple JavaScript functions that return JSX (JavaScript XML), which describes what the UI should look like. They can accept props as an argument and return React elements
 2) Class component
-> React Hooks can be used in functional components to handle state and lifecycle methods, making them more powerful and flexible.
-> )Class components were the only way to use state and lifecycle methods before Hooks were introduced in React 16.8.)
+=> Class components were the only way to use state and lifecycle methods before Hooks were introduced in React 16.8.
 
 Q. What is State ?
 Ans- ) State is a special object that holds data that may change over the component's lifetime.
 ) Functional components use the useState Hook to manage state, while class components use this.state and this.setState.
 
-Q. What is Lifecycle Method 
-Ans- ) Lifecycle methods are special methods in class components that allow you to run code at specific points in a component's lifecycle, such as when it mounts, updates, or unmounts
-) With Hooks, functional components can achieve similar behavior using useEffect.
+Q) Difference between props and state ?
+Ans-
+=> Props
+Props are the short form of Properties, are read-only inputs passed from parent component to child component. and provides the data that child component need to render
+Props are immutable in nature means can't be modified by the child component for modifying they need to call callback function with specific request
+Props are in usage for pass data and event handler function from parent to child components.
 
-Q. What is JSX ?
-Ans- ) It determines how the UI will look wherever the component is used
+=> State
+State are the special object that holds data and may change ove the lifespan of the components.
+State is mutable means it can be updayed the component who owns it
+State is used to track variables and handle dynamic data that change over time, such as form inputs, visibility toggles, and counters.
+
+=> Key Differences
+Source of Truth: Props are passed down from parent components, while state is managed locally within the component.
+Mutability: Props are immutable and cannot be changed by the receiving component, whereas state can be updated by the component that owns it.
+Responsibility: Props are used to configure a component or pass data, while state is used to handle dynamic data that changes over time within a component.
+
+Q) What is Lifecycle Method ?
+Ans- LIfecycle methods are special method that get called upon on diferent components lifecycle.
+Phases of Component Lifecycle
+=> Mounting: When a component is being created and inserted into the DOM.
+=> Updating: When a component is being re-rendered based on the changes to props or state.
+=> Unmounting: When a component is being removed from the DOM.
+=> Error Handling: When an error is thrown in a descendant component.
+
+Q) What is JSX ?
+Ans-
 ) JSX get converted to regular JS
 ) Babeljs.io/repel is a JS compiler that transforms JSX into plain JavaScript. Babel processes your code and converts the JSX syntax into React.createElement calls.
 
-Q. What is Fragments ?
-Ans- ) Allows grouping of multiple elements without extra DOM nodes
+Q) What is Fragments ?
+Ans-  Allows grouping of multiple elements without extra DOM nodes
 ) Return multiple elements without a wrapping parent which also provides cleaner DOM
 ) Two syntax 
 a) <React.Fragment>....</React.Fragment>
@@ -102,16 +124,16 @@ Ans- This allows a parent component to pass a function down to a child component
 
 ) ----------------------------------------------HOOKS-------------------------------------
 
-Q. What is useState()?
-Ans- useState is a hook that lets you add state to functional components. It returns an array with two elements: the current state value and a function to update that state.
+Q) What is useState()?
+Ans- useState is a hook that lets you add state to functional components, enabling the component to respond to the user input and other changes. It returns an array with two elements: the current state value and a function to update that state.
 
 Eg- const [state, setState] = useState(initialState);
-)state is the current state value.
-)setState is the function that lets you update the state.
-)initialState is the initial value of the state.
+state is the current state value.
+setState is the function that lets you update the state.
+initialState is the initial value of the state.
 
-Q. What is useRef ?
-Ans- It allows you to create a reference for a DOM element which persist across renders without causing a re-render when it changes.
+Q) What is useRef ?
+Ans- It allows you to create a reference for a DOM element which persist across renders without causing a re-render when its value changes.
 
 Example) 
 function MyComponent() {
@@ -120,23 +142,25 @@ function MyComponent() {
   return <div ref={myElementRef}>Hello, World!</div>;
 }
 
-Q. what is useContext() ?
-Ans- The useContext hook is a feature in React that allows functional components to access and use the value from a context. Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+Q) what is useContext() ?
+Ans- The useContext hook is a feature in React that allows functional components to access and use the value from a context. It allows you to share data across the component tree without having to pass props down manually at every level.
 
-) First, you create a context using the createContext function from React
-Example) const MyContext = createContext();
-) You then use the Provider component of the context to supply the value to its descendants
-) In a descendant component, you can use the useContext hook to access the context value
-Example) 
+=> First, you create a context using the createContext function from React
+=> Provider: Use a context provider to wrap parts of your component tree where you want the context to be available.
+=> n a descendant component, Use the useContext hook in a functional component to access the context value.
+
+=> Example: const MyContext = createContext();
+
+Example:
  function MyComponent() {
   const value = useContext(MyContext);
 
   return <div>{value}</div>;
 }
 
-Q. What is useReducer() ?
+Q) What is useReducer() ?
 Ans- The useReducer hook is an alternative to useState for managing state in a component. It's particularly useful when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. It is similar to the concept of reducers in Redux.
-)) const [state, dispatch] = useReducer(reducer, initialState);
+=> const [state, dispatch] = useReducer(reducer, initialState);
 
 reducer: A function that determines changes to an application's state. It uses the state and action to compute the new state.
 
