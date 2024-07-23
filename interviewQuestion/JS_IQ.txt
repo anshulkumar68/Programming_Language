@@ -22,7 +22,7 @@ undefined means a variable has been declared but has not yet been assigned a val
 Q- How JS works behind the scene ?
 Ans-  
 1. Parsing - When a browser encounters a JavaScript code block. The parser breaks down the code into tokens and creates a syntax tree(also known as abstract syntax tree or AST).
-2. Comilation & Execution - JS engine compiles the code into executable machine code using JIT compilation. The compiled code is then executed line by line, following the order of statements in the code.
+2. Complation & Execution - JS engine compiles the code into executable machine code using JIT compilation. The compiled code is then executed line by line, following the order of statements in the code.
 3. Execution context - Environment in which a piece of js is executed. Stores all the necessary information for some code to be executed.
 It consist of Variable environment, Scope chain and This keyword.
 These execution contexts are organized in a stack known as CALL STACK.
