@@ -70,7 +70,7 @@ Props are in usage for pass data and event handler function from parent to child
 
 => State
 State are the special object that holds data and may change ove the lifespan of the components.
-State is mutable means it can be updayed the component who owns it
+State is mutable means it can be updated the component who owns it
 State is used to track variables and handle dynamic data that change over time, such as form inputs, visibility toggles, and counters.
 
 => Key Differences
@@ -122,10 +122,18 @@ Ans- This allows a parent component to pass a function down to a child component
 ) Commonly used for event Handling
 ) Parent defines a function, child invokes it
 
-) ----------------------------------------------HOOKS-------------------------------------
-
+Q) What is prop drilling ?
+Ans- Prop drilling is a process in which we pass the properties down from parent component to the nested child component, drawback point of prop drilling is that even when intermediate component don't requires
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                   HOOKS                                                      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
 Q) What is useState()?
-Ans- useState is a hook that lets you add state to functional components, enabling the component to respond to the user input and other changes. It returns an array with two elements: the current state value and a function to update that state.
+Ans-In react, useState is a hook that lets you add state to functional components, enabling the component to respond to the user input and other changes. It returns an array with two elements: the current state value and a function to update that state.
+
+=> When to use
+updating counter or timer
+managing user input
+toggling UI elements
 
 Eg- const [state, setState] = useState(initialState);
 state is the current state value.
@@ -138,7 +146,7 @@ Ans-In react, useRef is a hook which allow us to create reference for a DOM elem
 => Syntax
 It returns us a mutable 'ref' object and also we can assign default value here 
 
-=> We can also manipulate the mutable object using current 
+=> We can also manipulate the mutable object using current property
 
 Example) 
 function MyComponent() {
@@ -148,7 +156,7 @@ function MyComponent() {
 }
 
 Q) what is useContext() ?
-Ans- The useContext hook allow to access the value of a context directly from context within a functional component. It allows you to share data across the component tree without having to pass props down manually at every level.
+Ans- In react, useContext is a hook allow to access the value directly from context within a functional component. It allows you to share data across the component tree without having to pass props down manually at every level.
 
 => Syntax
 First, you create a context using the createContext function from React
@@ -158,6 +166,7 @@ n a descendant component, Use the useContext hook in a functional component to a
 => When to use useContext
 When you need to share state or functions across multiple components without prop drilling.
 To handle translations and language settings across your application
+to handle authentication across the components
 
 => Example: const MyContext = createContext();
 
@@ -185,7 +194,7 @@ useEffect is used to perform side effects in React components. Side effects can 
 
 Q) What is useCallback() ?
 Ans- 
-=> The useCallback hook in React is used to memoize functions, allowing you to avoid unnecessary re-renders of functions when a component re-renders. It returns a memoized version of the callback function that only changes if one of the dependencies has changed.
+=> The useCallback hook in React is used to memoize functions, allowing you to avoid unnecessary re-renders of functions when a component re-renders.
 
 => Syntax
 The useCallback hook takes two arguments:
@@ -202,7 +211,7 @@ Stable Function References: It is particularly useful in conjunction with React.
 }, [dependencies]);
 
 Q) What is useMemo() ?
-Ans- Expensive Computations: useMemo caches the result of expensive calculations to avoid re-render
+Ans- In react, useMemo is a hook that allows you to caches the result of expensive calculations to avoid re-render so less time consumption by components
 
 => Syntax
 The useMemo hook takes two arguments
