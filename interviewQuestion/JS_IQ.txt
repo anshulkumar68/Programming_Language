@@ -3,7 +3,7 @@ Ans-
 => JavaScript is a high-level, object-oriented and interpreted programming language primarily used for adding interactivity and dynamic behavior to web pages.
 => JavaScript is a popular web scripting language and is used for client-side and server-side development. The JavaScript code can be inserted into HTML pages that can be understood and executed by web browsers while also supporting object-oriented programming abilities.
 
-Q- What are the key features of JavaScript?
+Q) What are the key features of JavaScript?
 Ans-
 => Lightweight, interpreted programming language
 => Cross-platform compatible
@@ -19,7 +19,7 @@ Prototype-based object-orientation: is a style of object-oriented programming wh
 Functions as first-class objects: This means that functions can be treated like any other data type, such as numbers, strings, or objects. Functions can be assigned to variables, passed as arguments to other functions, and returned from functions.
 undefined means a variable has been declared but has not yet been assigned a value, while null is an assignment value representing a deliberate absence of any value.
 
-Q- How JS works behind the scene ?
+Q) How JS works behind the scene ?
 Ans-  
 1. Parsing - When a browser encounters a JavaScript code block. The parser breaks down the code into tokens and creates a syntax tree(also known as abstract syntax tree or AST).
 2. Complation & Execution - JS engine compiles the code into executable machine code using JIT compilation. The compiled code is then executed line by line, following the order of statements in the code.
@@ -30,10 +30,10 @@ These execution contexts are organized in a stack known as CALL STACK.
 However, JavaScript also has a number of asynchronous features, such as callbacks, promises, and async/await, which is possible because of an EVENT LOOP mechanism. It keeps looking for task in the task queue and executes them when the call stack is empty. These features allow JavaScript code to run in the background without blocking the main thread
 5. Memory Management- JS engine have built-in garbage collectors that automatically manage memory allocation and deallocation and leds memory optimization.
 
-Q- What is the event loop in JavaScript and how does it work?
+Q) What is the event loop in JavaScript and how does it work?
 Ans- The event loop is a mechanism in JavaScript that allows asynchronous operations to be executed in a non-blocking manner by handling callbacks from the callback queue when the call stack is empty.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q) What are the different datatypes present in javascript?
 Ans-
@@ -165,7 +165,10 @@ This concept allows for more abstract and flexible code, enabling functions to b
 Q) What is callback functions ?
 Ans- A callback is a function that is passed as an argument to another function. The receiving function is responsible for executing the callback function at a specific point in its execution
 used for handle asynchronous operation
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q) Define forEach ?
+
+Q) find methods, setInterval and setTimeout method 
 
 Q. Explain Hoisting in javascript.
 Ans-
@@ -210,6 +213,17 @@ Ans-  Dot notation and bracket notation are used to access properties of objects
 Dot notation is the simpler and more commonly used method for accessing object properties. It involves accessing properties using the dot (.) operator followed by the property name
 
 Bracket notation allows you to access object properties using square brackets ([]) and providing the property name as a string. This notation is more flexible as it allows you to access properties dynamically
+
+Q) ES6 concepts ?
+Ans- Ecmascript 2015, introduced new features to enhancing the capabbilities of JS to write more clean, efficient and maintainable code.
+1. Arrow functions: Arrow functions provide a more concise syntax for writing functions
+2. let and const: ES6 introduced let and const for block-scoped variable declarations, replacing the function-scoped var.
+3. Template literals: Template literals allow for easier string interpolation and multi-line strings using backticks (``)
+4. Destructuring Assignment: Destructuring allows for unpacking values from arrays or objects into distinct variables.
+5. Rest and Spread Operators: The rest operator (...) collects remaining elements into an array, while the spread operator expands elements from an array or object.
+6. Default parameters: Default parameters enable functions to have default values for parameters if no argument is provided.
+7. Promises: Promises provide a cleaner way to handle asynchronous operations and avoid callback hell
+8. Map and set: ES6 introduces Map and Set collections, which provide more efficient and convenient ways to handle key-value pairs and unique values, respectively.
 
 Q6 - Destructuring arrays  ES6
 Ans- Destructuring in JavaScript allows you to extract/unpack values from arrays and objects, making your code more expressive.
