@@ -198,7 +198,7 @@ Ans-
 
 => Syntax
 The useCallback hook takes two arguments:
-The function you want to memoize to prevent from being recreated on every render.
+The function   you want to memoize to prevent from being recreated on every render.
 A dependency array specifies the values that the function depends on. The function will only re-render if one of these values changes.
 
 => When to Use useCallback
