@@ -127,6 +127,9 @@ Ans- Prop drilling is a process in which we pass the properties down from parent
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
                                                                    HOOKS                                                      
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q) What is hook ?
+Ans- Hooks are special functions in React that let you use state that let us manage component logic without using class components, making your code more readable and reusable.
+
 Q) What is useState()?
 Ans-In react, useState is a hook that lets you add state to functional components, enabling the component to respond to the user input and other changes. It returns an array with two elements: the current state value and a function to update that state.
 
@@ -231,14 +234,18 @@ Ans- The useReducer hook is an alternative to useState for managing state in a c
 
 reducer: A function that determines changes to an application's state. It uses the state and action to compute the new state.
 
-----------------------------------------------REACT-ROUTER-------------------------------------
+---------------------------------------------------------REACT-ROUTER------------------------------------------------
 
-Q. What is React Router ?
-Ans- React Router is a powerful library for handling navigation and routing in React applications. It allows you to define routes in your app and navigate between different components based on the URL. 
+Q) What is React Router ?
+Ans- React Router is a powerful JS library for handling navigation and routing in React applications. It allows you to define multiple routes in your app and navigate between different components based on the URL. 
 Installation: Use npm install react-router-dom
 
-Q. What is BroweserRouter ?
-Ans- Introduced in v5, BrowserRouter is the standard router component that uses the HTML5 history API to keep your UI in sync with the URL
+=> Key features of React Router
+Dynamic Routing: Allows for dynamic and flexible route definitions that can change based on application state
+Nested Routing: Supports nesting routes inside each other, making it easy to build complex UI structures.
+
+Q) What is BroweserRouter ?
+Ans- Introduced in version 4 of react router, BrowserRouter is the standard router component that uses the HTML5 history API to keep your UI in sync with the URL
 Ex)  <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -247,8 +254,8 @@ Ex)  <BrowserRouter>
       </Routes>
     </BrowserRouter>
 
-Q. What is RouterProvider ?
-Ans- Introduced in v6, It’s a more powerful and flexible way to configure your router. Instead of wrapping your routes directly in BrowserRouter, you configure your routes separately and pass them to RouterProvider as prop (createBrowserRouter)
+Q) What is RouterProvider ?
+Ans- Introduced in version 6 of react router, It’s a more powerful and flexible way to configure to create route. Instead of wrapping your routes directly in BrowserRouter, you configure your routes separately and pass them to RouterProvider as prop (createBrowserRouter)
 ) createBrowserRouter: helps creating the mapping for router provider.
 
 Ex) const router = createBrowserRouter([
@@ -265,18 +272,26 @@ Ex) const router = createBrowserRouter([
 function App() {
   return <RouterProvider router={router} />;
 
-Q. Layout routes
+Q) Why to use RouterProvider instead of BrowserRouter ?
+Ans- 
+1. Enhanced Data Loading
+RouterProvider supports data loading at the route level, which means data loading will be completed for your component before renderring 
+
+2. Built-in Error Handling
+RouterProvider includes built-in support for handling errors at the route level, by allowing you to define error handling logic directly in your route configurations
+
+Q) Layout routes
 Ans- 1. Layout Routes help us to use shared elements
 2. Outlet component is used to render the children at the nested routes
 
-Q. Data fetching using loader ?
+Q) Data fetching using loader ?
 Ans- 1. Loader method can be used to load data before a particular route is executed.
 2. The loader method must return the data that is loaded or promise.
 3. Data is available in component and all the child components.
 4. useLoaderData hook can be used to get the fetched data.
 5. Loading state can also be used. 
 
-Q. What is action in react router ?
+Q) What is action in react router ?
 Ans- 1. Actions provide a way to handle form submissions and other user actions before the route changes
 2. Custom Form component need to be used along with name attribute for all inputs
 3. Action function will get an data object. To generate correct request object method=“post” attribute should be used.
@@ -284,11 +299,45 @@ Ans- 1. Actions provide a way to handle form submissions and other user actions 
 5. Object.fromEntries(formData) can be used to get actual input data.
 6. redirect() response can be returned for navigation after submission.
 
-----------------------------------------------REDUX----------------------------------------------
+---------------------------------------------------------CONTEXT API---------------------------------------------------------
+Q) What is Context API ?
+Ans- It is a built-in feature that allows you to share state and other values between components without having to pass props explicitly through every level of the component tree. 
 
+=> Use cases
+This is especially useful for global data such as user authentication, themes, or settings, which need to be accessed by many components across your application.
+Avoiding prop drilling (passing props through many levels of components).
 
+=> The Context API consists of three main parts:
+1. React.createContext: This will allow us to create the context object, where we can store our states, props or components need to be avaialble global in application.
+2. React.Provider: In Provider, we will wrap the component where we want our context to be available.
+3. React.Consumer: For consumption, we required a hook known as useContext() for accessing the required values in current component.
 
--------------------------------------------------------------------------------------------------
+=> Example
+Toggle between Light and Dark theme in a application, where we want theme to be reflected globally across application is easy to implement using Context API
+
+Q) When to go for react-context ?
+Ans- React Context is well-suited for situations where you have simple or small pieces of state that need to be accessed by multiple components, such as theme toggling, language settings, or user authentication.
+React context should only be used for things that rarely change as 
+
+Q) Difference between React-Context and Redux ?
+Ans- 
+1. React context is suitable for low scale application for sharing simple, non-complex state whereas redux is suitable for large scale application to handle comprehensive state management.
+2. React context is slow in performance because it can have more than one context provider in whereas Redux has great performance cause it's have one store only
+3. React context is relatively simple to use and set-up whereas redux is more complex to set up and understand, requiring knowledge of actions, reducers, and the store
+
+---------------------------------------------------------REDUX---------------------------------------------------------
+Q) What is Redux ?
+Ans-
+Redux is not a in-built library of react and needs to be added as an external dependency, It is a state management tool that is used to manage app-wide state and its suitable for comprohensive state for managing application state that needs to be consistent.
+
+For using a value from store we need to subscribe it, Directly store updation is not possible For updating component need to dispatch a action, that action will be sent to reducer with complete store to update the value in store
+
+=> How redux works
+Single Source: Uses a single central store to maintain the entire application's state.
+Actions: Components never directly change the store. Changes to state are made through dispatched actions, which describe events.Reducers: Actions are processed by reducers, pure functions that return the new state
+Immutable: State is immutable; every change results in a new state object
+-------------------------------------------------------------------------------------------------------------------------
+
 virtual DOM and actual DOM
 2.Features of React
 3.JSX

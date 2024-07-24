@@ -3,7 +3,7 @@ Ans-
 => JavaScript is a high-level, object-oriented and interpreted programming language primarily used for adding interactivity and dynamic behavior to web pages.
 => JavaScript is a popular web scripting language and is used for client-side and server-side development. The JavaScript code can be inserted into HTML pages that can be understood and executed by web browsers while also supporting object-oriented programming abilities.
 
-Q- What are the key features of JavaScript?
+Q) What are the key features of JavaScript?
 Ans-
 => Lightweight, interpreted programming language
 => Cross-platform compatible
@@ -19,7 +19,7 @@ Prototype-based object-orientation: is a style of object-oriented programming wh
 Functions as first-class objects: This means that functions can be treated like any other data type, such as numbers, strings, or objects. Functions can be assigned to variables, passed as arguments to other functions, and returned from functions.
 undefined means a variable has been declared but has not yet been assigned a value, while null is an assignment value representing a deliberate absence of any value.
 
-Q- How JS works behind the scene ?
+Q) How JS works behind the scene ?
 Ans-  
 1. Parsing - When a browser encounters a JavaScript code block. The parser breaks down the code into tokens and creates a syntax tree(also known as abstract syntax tree or AST).
 2. Complation & Execution - JS engine compiles the code into executable machine code using JIT compilation. The compiled code is then executed line by line, following the order of statements in the code.
@@ -30,14 +30,15 @@ These execution contexts are organized in a stack known as CALL STACK.
 However, JavaScript also has a number of asynchronous features, such as callbacks, promises, and async/await, which is possible because of an EVENT LOOP mechanism. It keeps looking for task in the task queue and executes them when the call stack is empty. These features allow JavaScript code to run in the background without blocking the main thread
 5. Memory Management- JS engine have built-in garbage collectors that automatically manage memory allocation and deallocation and leds memory optimization.
 
-Q- What is the event loop in JavaScript and how does it work?
+Q) What is the event loop in JavaScript and how does it work?
 Ans- The event loop is a mechanism in JavaScript that allows asynchronous operations to be executed in a non-blocking manner by handling callbacks from the callback queue when the call stack is empty.
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q) What are the different datatypes present in javascript?
 Ans-
-1. Primitive types => Primitive data types can store only a single value
+1. Primitive types => Primitive data types can store only a single value 
+
 Boolean - For true and false values
 Null - For empty or unknown values
 Undefined - For variables that are only declared and not defined or initialized
@@ -165,9 +166,37 @@ This concept allows for more abstract and flexible code, enabling functions to b
 Q) What is callback functions ?
 Ans- A callback is a function that is passed as an argument to another function. The receiving function is responsible for executing the callback function at a specific point in its execution
 used for handle asynchronous operation
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
+Q) Define forEach ?
+Ans- In JavaScript, the forEach loop is a method available on arrays that allows you to iterate over each element in the array. The forEach method takes a callback function as an argument and executes that function once for each element in the array.
 
-Q. Explain Hoisting in javascript.
+=> Example
+let fruits = ["apple", "banana", "cherry"];
+
+fruits.forEach(function(fruit) {
+  console.log(fruit);
+});
+
+Q) Find method ?
+Ans- In JavaScript, the find method is used to locate the first element in an array that satisfies a given condition. It returns the value of the first matching element or undefined if no element meets the condition.
+
+Q) Define setTimeout and clearTimeout ?
+Ans- setTimeout and clearTimeout are built-in JS functions used for handling delayed execution of the code
+=> setTimeout: setTimeout function takes a callback function as first argument to be executed after specified delay with second argument as time in miliseconds and third arguments (optional)
+
+=> Example
+setTimeout(myFunc, 2000, "param1", "param2"); 
+
+=> clearTimeout: clearTimeout is used to cancel the previously defined setTimeout function if hasn't executed already
+
+Q) Define setInterval ?
+Ans- setInterval is a built-in JS function that repeatedly calls a specified function at specified time intervals, it's useful in task which need to be performed periodically, like updating a clock or polling a server.
+
+setInterval(function, interval);
+function: The function to be executed.
+interval: The time, in milliseconds, between each execution.
+
+Q) Explain Hoisting in javascript.
 Ans-
 => Hoisting is the default behaviour of javascript where all the variable and function declarations are moved on top.
 Note - Variable initializations are not hoisted, only variable declarations are hoisted
@@ -179,17 +208,15 @@ alert('a='+a);
 var a;
 
 
-Q- What is the difference between == and === in JavaScript?
+Q) What is the difference between == and === in JavaScript?
 Ans- == is the equality operator, which performs type coercion before comparing two values, while === is the strict equality operator, which checks for both value and datatype equality without type coercion.
 
-
-Q- What is the difference between let, const, and var?
+Q) What is the difference between let, const, and var?
 Ans- var is function-scoped and can be redeclared and reassigned from the very beginning var keyword is in usage,
 let is block-scoped and can be reassigned but not redeclared.
 const is also block-scoped but cannot be reassigned or redeclared.
 
-
-Q- Truthy and falsy values
+Q) Truthy and falsy values
 Ans- Values that are considered truthy will evaluate to true when coerced to a boolean. These include:
 Non-empty strings ("hello", "0")
 Non-zero numbers (e.g., 1, -1)
@@ -205,11 +232,22 @@ NaN (Not a Number)
 false
 
 
-Q- Dot vs bracket notation in object
+Q) Dot vs bracket notation in object
 Ans-  Dot notation and bracket notation are used to access properties of objects, but they have some differences in their usage.
 Dot notation is the simpler and more commonly used method for accessing object properties. It involves accessing properties using the dot (.) operator followed by the property name
 
 Bracket notation allows you to access object properties using square brackets ([]) and providing the property name as a string. This notation is more flexible as it allows you to access properties dynamically
+
+Q) ES6 concepts ?
+Ans- Ecmascript 2015, introduced new features to enhancing the capabbilities of JS to write more clean, efficient and maintainable code.
+1. Arrow functions: Arrow functions provide a more concise syntax for writing functions
+2. let and const: ES6 introduced let and const for block-scoped variable declarations, replacing the function-scoped var.
+3. Template literals: Template literals allow for easier string interpolation and multi-line strings using backticks (``)
+4. Destructuring Assignment: Destructuring allows for unpacking values from arrays or objects into distinct variables.
+5. Rest and Spread Operators: The rest operator (...) collects remaining elements into an array, while the spread operator expands elements from an array or object.
+6. Default parameters: Default parameters enable functions to have default values for parameters if no argument is provided.
+7. Promises: Promises provide a cleaner way to handle asynchronous operations and avoid callback hell
+8. Map and set: ES6 introduces Map and Set collections, which provide more efficient and convenient ways to handle key-value pairs and unique values, respectively.
 
 Q6 - Destructuring arrays  ES6
 Ans- Destructuring in JavaScript allows you to extract/unpack values from arrays and objects, making your code more expressive.
