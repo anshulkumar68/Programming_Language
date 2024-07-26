@@ -53,7 +53,38 @@ Example: Objects
 Q) Explain the concept of promises in JavaScript.
 Ans- Promises are objects representing the eventual completion or failure of an asynchronous operation. They allow you to handle asynchronous operations more easily by chaining .then() and .catch() methods.
 
-Promise is ceated using "Promise" constructor which takes 2 parameter resolve and reject. we call resolve(value) if when the asynchronous task completes successfully, else reject() if fails.
+=> Promise is ceated using "Promise" constructor which takes 2 parameter resolve and reject. we call resolve(value) if when the asynchronous task completes successfully, else reject() if fails.
+
+=> Promise Combinators 
+1. Promise.all
+Description: Waits for all promises to be fulfilled or for one to be rejected.
+Usage: If you need all promises to succeed and want to handle the results together, use Promise.all. 
+
+2. Promise.allSettled
+Description: Waits for all promises to either resolve or reject and returns a list of results for each promise.
+Usage: Use Promise.allSettled when you want to get the result of all promises, regardless of whether they succeed or fail
+
+3. Promise.any
+Description: Returns the first promise that resolves, or return rejects if all promises are rejected.
+Usage: Use Promise.any when you want to proceed as soon as any promise resolves successfully.
+
+4. Promise.race
+Description: Returns the promise that resolves or rejects first.
+Usage: Use Promise.race when you need the result of the fastest promise, regardless of whether it resolves or rejects.
+
+Q) async await in js ?
+Ans- async/await are built on top of promises, to make handling asynchronous operation in more straightforward and readable. it simplify the way of write and managing code which traditionally involved .then() and .catch() methods.
+
+=> async keyword
+Definition: The async keyword is used to declare a function as asynchronous. An async function always returns a Promise.
+Behavior: If the function returns a value, that value is automatically wrapped in a Promise that resolves with the value. If the function throws an error, the Promise is rejected with that error.
+
+=> await keyword
+Definition: await keyword we can only use within the async functions. It pauses the execution time of the async function and wait for the response to be resolved or rejects.
+Behavior: When used with a Promise, await will:
+Pause the function's execution until the Promise resolves.
+Resume execution with the resolved value when the Promise resolves.
+Throw an error if the Promise is rejected, which you can handle with a try/catch block.
 
 Q) What is strict mode ?
 Ans- =>  strict mode is a way to opt in to a restricted variant of JavaScript
@@ -249,14 +280,14 @@ Ans- Ecmascript 2015, introduced new features to enhancing the capabbilities of 
 7. Promises: Promises provide a cleaner way to handle asynchronous operations and avoid callback hell
 8. Map and set: ES6 introduces Map and Set collections, which provide more efficient and convenient ways to handle key-value pairs and unique values, respectively.
 
-Q6 - Destructuring arrays  ES6
+Q) Destructuring arrays  ES6
 Ans- Destructuring in JavaScript allows you to extract/unpack values from arrays and objects, making your code more expressive.
 
-Q7- The spread operator(...)  ES6
+Q) The spread operator(...)  ES6
 Ans- Right side of "=" operator
 spread operator is used to expand iterables (like arrays or objects) into individual elements.
 
-Q8- Rest pattern(...)  ES6
+Q) Rest pattern(...)  ES6
 Ans- Left side of "=" operator
 Rest operator allows you to collect multiple elements into a single array
 
