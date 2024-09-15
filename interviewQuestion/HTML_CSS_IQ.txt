@@ -1,19 +1,26 @@
- Q1. What is HTML?
+Q) What is HTML?
 Ans- HTML is the standard markup language for creating web pages
 HTML elements tell the browser how to display the content
 An HTML element is defined by a start tag, some content, and an end tag
 <h1>My first Heading</h1>
 
-Q2. HTML tags vs HTMl Element?
+Q) HTML tags vs HTMl Element?
 Ans- No. HTML Elements are defined by starting tag, may contain some content and a closing tag. For example, <h1>Heading 1</h1> is a HTML element but just <h1> is a starting tag and </h1> is a closing tag
 
-Q3. Different types of list in HTML.
+Q) Significance of head and body tag?
+Ans- only 1 head tag in the entire html document and will always be before the body tag.
+head tag provides information about the document.
+It should always be enclosed in the html tag. This tag contains the metadata about the webpage and the tags which are enclosed by head tag like <link>, <meta>, style, script, etc. are not displayed on the web page
+
+body tag defines the body of the HTML document. It should always be enclosed in the html tag. All the contents which needs to be displayed on the web page like images, text, audio, video, contents, using elements like <p>, <img>, <audio>, <heading>, <video>, <div>, etc. will always be enclosed by the body tag. Also, there can be only 1 body element in an HTML document and will always be after the <head> tag
+
+Q) Different types of list in HTML.
 Ans- Unordered list, ordered list and definiiton list
 
-Q4. Difference between id and class attribute?
+Q) Difference between id and class attribute?
 Ans- Both are used for providing specific styling to particular tag, Multiple element in HTML can have the same class value, whereas a value of id attribute of one element cannot be associated with another html element
 
-Q5. what are various formatting tag in HTML ?
+Q) what are various formatting tag in HTML ?
 Ans- <b>, <i>, <em> - makes text italic but with added semantics importance
 <big> - increases the font size of the text by one unit
 <small> - decreases the font size of the text by one unit
@@ -24,14 +31,8 @@ Ans- <b>, <i>, <em> - makes text italic but with added semantics importance
 <mark> - highlights the text
 <ins> - displays as added text
 
-Q6. Significance of head and body tag?
-Ans- only 1 head tag in the entire html document and will always be before the body tag.
-head tag provides information about the document.
-It should always be enclosed in the html tag. This tag contains the metadata about the webpage and the tags which are enclosed by head tag like <link>, <meta>, style, script, etc. are not displayed on the web page
 
-body tag defines the body of the HTML document. It should always be enclosed in the html tag. All the contents which needs to be displayed on the web page like images, text, audio, video, contents, using elements like <p>, <img>, <audio>, <heading>, <video>, <div>, etc. will always be enclosed by the body tag. Also, there can be only 1 body element in an HTML document and will always be after the <head> tag
-
-Q7. Link in HTML
+Q) Link in HTML
 Ans- HTML provides a hyperlink - <a> tag to specify the links in a webpage
 The 'href' attribute is used to specify the link and the 'target' attribute is used to specify, where do we want to open the linked document
 
@@ -41,52 +42,49 @@ _parent: it opens the document in a parent frame
 _top: it opens the document  in  a fully-body window
 
 
-Q8. How many ways we can specify CSS?
+Q) How many ways we can specify CSS?
 Ans- Inline- here we use the 'style' attribute inside the HTML element
 Internal- Here we use the <style> tag inside the <head> tag
 External- Here we use the <link> tag inside the <head> tag to reference the CSS file into our HTML code. Again the binding between elements and styles is done using 'id' and 'class' attributes.
 
-Q9.Include JS code in HTML
-Ans-
-
-Q10.Inline and block element ?
+Q) Inline and block element ?
 Ans- Inline element just take up the space that is absolutely necessary for the content and does not start from the new line.
 Example: <span>, <a>, <strong>, <img>, <button>, <em>, <select>, <label>, <sub>, etc.
 
 Block element start on a new line and consume the full width of the viewport.
 Example. <div>, <p>, <header>, <footer>, <h1>...<h6>, <form>, <table>, <canvas>, <video>, <blockquote>, <ul>, ol, figure, hr, article, section, etc
 
-Q11. How do you display a table in an HTMl webpage?
+Q) How do you display a table in an HTMl webpage?
 Ans- The html <table> tag is used to display data in a tabular format
-It is also used to manage the layout of the page, for example, header section, navigation bar, body content, footer section
+It is also used to manage the layout of the page, for example, header section, navigation bar, body content, footer section)
 
-Q12. What is whitespace in HTML
+Q) What is whitespace in HTML
 Ans- An empty sequence of space character is called the whitespace in html, the whitespace is considered as a single space character in html
 
-Q13. How do you create links to different sections within the same html webpage?
+Q) How do you create links to different sections within the same html webpage?
 Ans- we use the <a> tag, along with referencing through the use of #symbol, to create several links to different sections within the same webpage
 The hyperlink can be added to images too.
 
-Q14. Define an image map in HTML?
+Q) Define an image map in HTML?
 Ans- An image map helps in linking with the different kinds of web pages using a single image
 
 The image map can be used for defining shapes in the images that are made part of the image mapping process
 
 
-Q15. What is semantic HTML
+Q) What is semantic HTML
 Ans- These elements that have meaning and clearly describes its meaning to both the browser and and developer. EX:  <form> , <table> , and <article>
 
-Q16. What is non-semantic HTML
+Q) What is non-semantic HTML
 Ans- These elements tell nothing about it's content. EX: div, span
 
-Q17. How do you create nested web pages in HTML ?
+Q) How do you create nested web pages in HTML ?
 Ans- Nested web pages basically mean a webpage within a webpage
 We can create nested web pages in HTML using built-in frame tag
 
-Q18. How do you insert a copyright symbol in HTML ?
+Q) How do you insert a copyright symbol in HTML ?
 Ans- You can insert a copyright symbol by using &copy or &#169, in and HTML file
 
-Q19.html vs html5 ?
+Q) html vs html5 ?
 Ans- 1.Doctype declaration
 HTML- Uses a lengthy and complex doctype declaration
 HTML5- Simplified doctype declaration
@@ -111,7 +109,15 @@ Web Storage API (localStorage and sessionStorage) for client-side storage.
 
 6.Form Enhancements
 
-CSS-------------------------------------------------------------------------------------------------------------------------------------------------------------
+)div, span and other semantic tags
+)lists
+)adding internal links
+)media tags
+)special characters
+)favicon and meta tags
+
+
+-----------------------------------------------------------------CSS-------------------------------------------------------------------
 
 Q1. BOX Model ?
 Ans- The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins. 

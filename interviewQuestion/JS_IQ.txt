@@ -33,11 +33,14 @@ However, JavaScript also has a number of asynchronous features, such as callback
 Q) What is the event loop in JavaScript and how does it work?
 Ans- The event loop is a mechanism in JavaScript that allows asynchronous operations to be executed in a non-blocking manner by handling callbacks from the callback queue when the call stack is empty.
 
+Q) Define OOPS ?
+Ans- 
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
 Q) What are the different datatypes present in javascript?
 Ans-
 1. Primitive types => Primitive data types can store only a single value 
+Primitives datatypes are datatypes which don't have any methods align with it
 
 Boolean - For true and false values
 Null - For empty or unknown values
@@ -51,9 +54,23 @@ Symbols - For unique identifiers for objects
 Example: Objects
 
 Q) Explain the concept of promises in JavaScript.
-Ans- Promises are objects representing the eventual completion or failure of an asynchronous operation. They allow you to handle asynchronous operations more easily by chaining .then() and .catch() methods.
+Ans- A promise in JavaScript is an object representing the eventual completion (or failure) of an asynchronous operation and its resulting value. It acts as a placeholder for a value that will be available in the future 
+=> such as fetching data from the internet, reading a file, or waiting for a timer.
+=> There are 3 state in promise
+1. Pending :  The initial state of a Promise when it is created. In this state, the Promise is neither fulfilled nor rejected
+2. Fulfilled : when a success response come from server identify as fulfilled request
+3. Rejected : If server throw a error or anything gone wrong identify as rejected
 
-Promise is ceated using "Promise" constructor which takes 2 parameter resolve and reject. we call resolve(value) if when the asynchronous task completes successfully, else reject() if fails.
+Ways to handle asynchronous operation in JS
+.then and .catch
+=> .then(): It takes two parameters that will be executed when a promise is fulfilled(resolved) and other parameter when a promise got rejected and other parameter is optional(second parameter)
+=> .catch(): It is used to handle errors that occur during the asynchronous operation. It is specifically for handling rejections of a promise.
+
+async and await
+=> They provide more readable and synchronous way to work with promise. 
+=> async Declares a function that will return a promise
+=> await pauses the execution of the async function until the promise is resolved or rejected.  
+
 
 Q) What is strict mode ?
 Ans- =>  strict mode is a way to opt in to a restricted variant of JavaScript
@@ -166,6 +183,7 @@ This concept allows for more abstract and flexible code, enabling functions to b
 Q) What is callback functions ?
 Ans- A callback is a function that is passed as an argument to another function. The receiving function is responsible for executing the callback function at a specific point in its execution
 used for handle asynchronous operation
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 Q) Define forEach ?
 Ans- In JavaScript, the forEach loop is a method available on arrays that allows you to iterate over each element in the array. The forEach method takes a callback function as an argument and executes that function once for each element in the array.
@@ -249,18 +267,18 @@ Ans- Ecmascript 2015, introduced new features to enhancing the capabbilities of 
 7. Promises: Promises provide a cleaner way to handle asynchronous operations and avoid callback hell
 8. Map and set: ES6 introduces Map and Set collections, which provide more efficient and convenient ways to handle key-value pairs and unique values, respectively.
 
-Q6 - Destructuring arrays  ES6
+Q) Destructuring arrays  ES6
 Ans- Destructuring in JavaScript allows you to extract/unpack values from arrays and objects, making your code more expressive.
 
-Q7- The spread operator(...)  ES6
+Q) The spread operator(...)  ES6
 Ans- Right side of "=" operator
 spread operator is used to expand iterables (like arrays or objects) into individual elements.
 
-Q8- Rest pattern(...)  ES6
+Q) Rest pattern(...)  ES6
 Ans- Left side of "=" operator
 Rest operator allows you to collect multiple elements into a single array
 
-Q9. Short circuiting (&& and ||) ES6
+Q) Short circuiting (&& and ||) ES6
 Ans- where evaluation of an expression stops as soon as the outcome is determined based on the initial part of the expression, without needing to evaluate the entire expression
 
 Q10. Nullish Coalescing Operator (??)  ECMA2020

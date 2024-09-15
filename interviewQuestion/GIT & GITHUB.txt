@@ -17,7 +17,7 @@ create repo on github -> git clone -> git init -> git status -> git remote add o
 git fetch 
 git merge origin/main
 
-// Command to pull changes from the remote repository (GitHub) to your local repository:
+// Command to pull changes from the remote repository (G itHub) to your local repository:
 git pull origin main
 
 // 4 types of status state in github

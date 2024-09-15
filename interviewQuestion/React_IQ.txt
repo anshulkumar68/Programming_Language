@@ -4,7 +4,10 @@ Ans- Library: It provides specific functionality that can be called upon when ne
 Framework: It includes libraries, tools, guidelines and best practices to structure the development process.
 
 Q) What is React JS ?
-Ans- React is free and open-source front-end JS library created for building fast and interactive user interface for web application using reusable components
+Ans- React is free and open-source front-end JS library used for building fast SPA and interactive user interface for web application using reusable components
+
+Q) What is SPA ?
+Ans- It is a Single page application is a web application that have only one single web page. whenever user do some action it go updated dynamically without reloading or refreshing the web page 
 
 Q) Problems with JS ?
 Ans-
@@ -15,21 +18,39 @@ JS is Imperative where developer need to define how" to do things step-by-step
 
 Q) Features of react 
 Ans- 
+React allow us to create a single page application (SPA)
 React creates a web page with small and reusable components
 React uses a virtual DOM to improve performance. Instead of directly manipulating the DOM
 React is declarative where developer describe what the UI should look like for a given state.
 React uses JSX syntax extension that looks similar to HTML that allows us to write HTMl element in JS and increase the code readibility and writability.
 
+Q) Difference between VIrtual DOM and real DOM ?
+Ans- 
+=> Real DOM
+Document object model is the browser's representation of the HTML document as a tree structure that is used by the browser to render the page
+
+=> Virtual DOM
+The Virtual DOM is an in-memory representation of the Real DOM. It is used by frameworks like React to optimize updates by minimizing renders in the Real DOM.
+------------------------------------------------------------------------------FILES RELATED QUESTIONS----------------------------------------------------------------
+Q) What is the role of public folder in React ?
+Ans- public folder contains static assets that are served directly to the user's browser, such as images, fonts and the index.html file
+
+Q) What is App.js file in React ?
+Ans- App.js is thetop/main/root level component in the React application, and it is responsible for rendering all of the other components.
+
+Q) What is the main.js file in React ?
+Ans- Main.js file is the js file which renders all the components and replace the root element of index.html with the newly rendered component or root element.
+
 Q) Explain export  ?
-Ans- For allowing the other components to import it using "import statement" and use it.
+Ans- Exporting a component allowing the other components to import it using "import statement" and use it.
 
 Q) Explain "import React from 'react'" ?
 Ans- This line imports the core React library, which is necessary to use JSX syntax and create React components.
 
 Q) Explain "import ReactDOM from 'react-dom/client'"?
-Ans- This line imports the ReactDOM library specifically for creating and managing the DOM nodes.
+Ans- ReactDOM is a js library which convert your components (which are written in React syntax) to the actual browser DOM.
 
-Q. Explain "ReactDOM.createRoot(document.getElementById('root')).render"?
+Q) Explain "ReactDOM.createRoot(document.getElementById('root')).render"?
 Ans- ) ReactDOM.createRoot: This method creates a root React node that can manage the rendering of React components.
 ) document.getElementById('root'): This selects the HTML element with the id of root where the React app will be mounted.
 ) render: This method is called to render the specified React elements into the root node.
@@ -49,7 +70,7 @@ Ans- ) When component data changes, React updates the virtual DOM's state to mir
 ) It identifies the specific nodes that need updating
 ) Only these nodes are updated in the real browser DOM, making it efficient.
 
-Q. what is components ?
+Q) what is components ?
 Ans- Components are the building blocks of the user interface. They allow developers to break down the UI into reusable, independent pieces
 Components can be either class components or functional components
 1) Functional component
@@ -57,7 +78,7 @@ Components can be either class components or functional components
 2) Class component
 => Class components were the only way to use state and lifecycle methods before Hooks were introduced in React 16.8.
 
-Q. What is State ?
+Q) What is State ?
 Ans- ) State is a special object that holds data that may change over the component's lifetime.
 ) Functional components use the useState Hook to manage state, while class components use this.state and this.setState.
 
@@ -82,14 +103,26 @@ Q) What is Lifecycle Method ?
 Ans- LIfecycle methods are special method that get called upon on diferent components lifecycle.
 Phases of Component Lifecycle
 => Mounting: When a component is being created and inserted into the DOM.
-=> Updating: When a component is being re-rendered based on the changes to props or state.
+=> Updating: When a component is being re-rendere d based on the changes to props or state.
 => Unmounting: When a component is being removed from the DOM.
 => Error Handling: When an error is thrown in a descendant component.
 
 Q) What is JSX ?
 Ans-
-) JSX get converted to regular JS
-) Babeljs.io/repel is a JS compiler that transforms JSX into plain JavaScript. Babel processes your code and converts the JSX syntax into React.createElement calls.
+=> JavaScript XML is the extension used by react to write HTML-like code
+=> JSX get converted to regular JS
+=> Babeljs.io/repel is used to transpile JSX syntax into regular JS which browser can understand.
+
+Q) What is transpiler ?
+Ans- It converts source code from one programming language to another.
+
+Q) Advantages of JSX ?
+Ans- => Provide the way of writing HTML in JS 
+=> Improved code redability and writability.
+=> Error checking in advance
+=> Support javascript expressions
+=> Improved performance
+=> Code Reusability
 
 Q) What is Fragments ?
 Ans-  Allows grouping of multiple elements without extra DOM nodes
