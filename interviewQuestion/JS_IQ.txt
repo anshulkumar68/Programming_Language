@@ -15,14 +15,16 @@ Ans-
 
 => Object-oriented: JavaScript is an object-oriented language, which means that it supports the concept of objects. Objects are collections of data and functions that act together as a single unit.
 
-Prototype-based object-orientation: is a style of object-oriented programming where classes are not explicitly defined. Instead, classes are derived by adding methods and properties to an empty object 
-Functions as first-class objects: This means that functions can be treated like any other data type, such as numbers, strings, or objects. Functions can be assigned to variables, passed as arguments to other functions, and returned from functions.
+=> Functions as first-class objects: This means that functions can be treated like any other data type, such as numbers, strings, or objects. Functions can be assigned to variables, passed as arguments to other functions, and returned from functions.
+
+=> Prototype-based object-orientation: is a style of object-oriented programming where classes are not explicitly defined. Instead, classes are derived by adding methods and properties to an empty object.
+
 undefined means a variable has been declared but has not yet been assigned a value, while null is an assignment value representing a deliberate absence of any value.
 
 Q) How JS works behind the scene ?
 Ans-  
 1. Parsing - When a browser encounters a JavaScript code block. The parser breaks down the code into tokens and creates a syntax tree(also known as abstract syntax tree or AST).
-2. Complation & Execution - JS engine compiles the code into executable machine code using JIT compilation. The compiled code is then executed line by line, following the order of statements in the code.
+2. Compilation & Execution - JS engine compiles the code into executable machine code using JIT compilation. The compiled code is then executed line by line.
 3. Execution context - Environment in which a piece of js is executed. Stores all the necessary information for some code to be executed.
 It consist of Variable environment, Scope chain and This keyword.
 These execution contexts are organized in a stack known as CALL STACK.
@@ -48,7 +50,7 @@ BigInt: Represents integers with arbitrary magnitude.
 Symbols - For unique identifiers for objects
 
 2. Non-Primitive types => To store multiple and complex values, non-primitive data types are used.
-Example: Objects
+Example: Objects, Arrays and functions
 
 Q) Explain the concept of promises in JavaScript.
 Ans- Promises are objects representing the eventual completion or failure of an asynchronous operation. They allow you to handle asynchronous operations more easily by chaining .then() and .catch() methods.
@@ -291,61 +293,76 @@ Q) Rest pattern(...)  ES6
 Ans- Left side of "=" operator
 Rest operator allows you to collect multiple elements into a single array
 
-Q9. Short circuiting (&& and ||) ES6
+Q) Short circuiting (&& and ||) ES6
 Ans- where evaluation of an expression stops as soon as the outcome is determined based on the initial part of the expression, without needing to evaluate the entire expression
 
-Q10. Nullish Coalescing Operator (??)  ECMA2020
+Q) Nullish Coalescing Operator (??)  ECMA2020
 Ans-  It provides a concise way to handle default values for cases where a variable might be null or undefined, but not for other falsy values like 0 or ''.
 
-Q11- Optional chaining    ES2020
+Q) Optional chaining    ES2020
 Ans- It allows you to safely access nested properties of an object without having to explicitly check if each property exists
 
-Q12- map() method
+Q) map() method
 Ans-  Iterates over each element of the array, applies a function to each element, and returns a new array with the results of applying the function to each element.
 
-Q13- filter() method
+Q) filter() method
 Ans-  Iterates over each element of the array, applies a filtering condition to each element, and returns a new array containing only the elements that satisfy the filtering condition.
 
-Q14- reduce() method
+Q) reduce() method
 Ans- Iterates over each element of the array, applies a function that accumulates a single value from the elements of the array, and returns the accumulated value.
 
 
-Q16- What are the differences between undefined and null?
+Q) What are the differences between undefined and null?
 Ans- undefined means a variable has been declared but has not yet been assigned a value, whereas null is an assignment value, meaning that a variable has been declared and given the value of null
 
-Q18- What is the scope in JavaScript?
+Q) What is the scope in JavaScript?
 Ans- Scope refers to the accessibility of variables, functions, and objects in particular parts of your code during runtime.
 
-Q20- Explain the event bubbling and event capturing in JavaScript.
+Q) Explain the event bubbling and event capturing in JavaScript.
 Ans- Event bubbling and capturing are two ways of event propagation in the DOM. In event bubbling, the event starts at the innermost target element and works its way up the DOM tree, while in event capturing, the event starts at the outermost element and moves towards the target element.
 
-Q21- What is the purpose of the this keyword in JavaScript?
+Q) What is the purpose of the this keyword in JavaScript?
 Ans- The this keyword in JavaScript is a reference to the context in which a function is called. It provides a way to access the properties and methods of an object within its methods
 
-Q23- Explain the concept of prototype in JavaScript.
+Q) Explain the concept of prototype in JavaScript.
 Ans- Prototypes are a way to implement inheritance in JavaScript, where objects can inherit properties and methods from other objects through their prototype chain.
 
-Q24- What are some ways to handle asynchronous operations in JavaScript?
+Q) What are some ways to handle asynchronous operations in JavaScript?
 Ans- Promises, async/await, and callback functions are common ways to handle asynchronous operations in JavaScript.
 
-Q28- Explain the difference between arrow functions and regular functions in JavaScript.
+Q) Explain the difference between arrow functions and regular functions in JavaScript.
 Ans- Arrow functions have a concise syntax making them useful in writing one-line blocks of code whereas Regular functions are better at handling logic that requires multiple expressions.
 
-Q29- What is a closure? Can you give an example of how you might use one?
+Q) What is a closure? Can you give an example of how you might use one?
 Ans- A closure is a function that has access to its outer function's scope even after the outer function has finished executing. An example could be creating a counter function using closure to maintain its state.
 
-Q31- What is the difference between localStorage and sessionStorage?
+Q) What is the difference between localStorage and sessionStorage?
 Ans-
 localStorage: Data stored using localStorage persists indefinitely until explicitly deleted by the website or the user.
 sessionStorage: Data stored using sessionStorage persists only for the duration of the page session. It is cleared when the page session ends, typically when the browser tab is closed.
 
-Q32- What is lazy loading ?
+Q) What is lazy loading ?
 Ans- Lazy loading is a technique of delaying non-essential resources (such as images, scripts, or stylesheets) until they are needed. This helps to improve the initial loading time and overall performance of a web page.
 
-Q33- How can you optimize the performance of a website/application built with JavaScript?
+Q) How can you optimize the performance of a website/application built with JavaScript?
 Ans- Performance optimization techniques include minimizing HTTP requests, using asynchronous loading for resources, optimizing images and media, minimizing and optimizing JavaScript code, using caching strategies, and implementing lazy loading.
 
+==============================================REGULAR EXPRESSION===========================================================================
+Q) What is regular expression ?
+Ans- It is sequence of characters that forms a search pattern. It is used to match patterns for provided string, making it powerful tool for searching, replacing, extracting specific information in text
 
+.test method
+=> The .test() method takes the regex, applies it to a string (which is placed inside the parentheses), and returns true or false if your pattern finds something or not.
+let testStr = "freeCodeCamp";
+let testRegex = /Code/;
+testRegex.test(testStr);
 
+.match method
+=> the .match() method takes the regex, applies it to the string and returns array
 
+=> flag
+i : it will ignore the uppercase, lowercase for the provided regular expression
+g : To search or extract a pattern more than once, we can use global search flag 
+.(wildcard character) : used to match any single character
+  
 
