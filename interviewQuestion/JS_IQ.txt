@@ -286,7 +286,7 @@ Ans- Event bubbling and capturing are two ways of event propagation in the DOM. 
 Q) What is the purpose of the this keyword in JavaScript?
 Ans- The this keyword in JavaScript is a reference to the context in which a function is called. It provides a way to access the properties and methods of an object within its methods
 
-Q) Explain the concept of prototype in JavaScript.
+Q) Explain the concept of prototype in JavaScript.promis
 Ans- Prototypes are a way to implement inheritance in JavaScript, where objects can inherit properties and methods from other objects through their prototype chain.
 
 Q) What are some ways to handle asynchronous operations in JavaScript?
