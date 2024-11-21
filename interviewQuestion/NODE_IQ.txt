@@ -1,7 +1,0 @@
-1) what is node.js
-Ans) node is an open-source runtime environment that allows to run js code outside of browser, typically on server 
-key features:
-a) Asynchronous I/O => Handles multiple tasks without waiting for one to finish uses features like promises, callbacks, async/await
-b) Single threaded => Despite being single-threaded, it can handle thousands of concurrent connections using an event loop.
-c) Open Source => Maintained by a large community, with numerous libraries available via npm (Node Package Manager).
-
