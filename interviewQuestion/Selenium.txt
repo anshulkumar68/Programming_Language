@@ -1,0 +1,14 @@
+1) What is webdriver?
+-> webdriver is one of the component in the selenium
+-> webdriver is a module in terms of python
+-> webdriver is an API
+Firebox browser ---> Firebox()
+Chrome browser ---. Chrome()
+Edge ----> Edge()
+
+2) Architecture of webdriver
+-> Selenium 3
+Selenium language bindings ---> JSON wire protocol ---> Browser drivers ---> w3c ---> Browsers 
+
+-> Selenium 4
+Selenium language bindings ---> w3c ---> Browser drivers ---> w3c ---> Browsers 
