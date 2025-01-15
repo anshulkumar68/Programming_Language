@@ -1,0 +1,386 @@
+Q) Difference between library and Framework ?
+Ans- Library: It provides specific functionality that can be called upon when needed.
+
+Framework: It includes libraries, tools, guidelines and best practices to structure the development process.
+
+Q) What is React JS ?
+Ans- React is free and open-source front-end JS library used for building fast SPA and interactive user interface for web application using reusable components
+
+Q) What is SPA ?
+Ans- It is a Single page application is a web application that have only one single web page. whenever user do some action it go updated dynamically without reloading or refreshing the web page 
+
+Q) Problems with JS ?
+Ans-
+React has a simpler mental model
+JS is cumbersome
+JS don't provide Reusable Components
+JS is Imperative where developer need to define how" to do things step-by-step
+
+Q) Features of react 
+Ans- 
+React allow us to create a single page application (SPA)
+React creates a web page with small and reusable components
+React uses a virtual DOM to improve performance. Instead of directly manipulating the DOM
+React is declarative where developer describe what the UI should look like for a given state.
+React uses JSX syntax extension that looks similar to HTML that allows us to write HTMl element in JS and increase the code readibility and writability.
+
+Q) Difference between VIrtual DOM and real DOM ?
+Ans- 
+=> Real DOM
+Document object model is the browser's representation of the HTML document as a tree structure that is used by the browser to render the page
+
+=> Virtual DOM
+The Virtual DOM is an in-memory representation of the Real DOM. It is used by frameworks like React to optimize updates by minimizing renders in the Real DOM.
+------------------------------------------------------------------------------FILES RELATED QUESTIONS----------------------------------------------------------------
+Q) What is the role of public folder in React ?
+Ans- public folder contains static assets that are served directly to the user's browser, such as images, fonts and the index.html file
+
+Q) What is App.js file in React ?
+Ans- App.js is thetop/main/root level component in the React application, and it is responsible for rendering all of the other components.
+
+Q) What is the main.js file in React ?
+Ans- Main.js file is the js file which renders all the components and replace the root element of index.html with the newly rendered component or root element.
+
+Q) Explain export  ?
+Ans- Exporting a component allowing the other components to import it using "import statement" and use it.
+
+Q) Explain "import React from 'react'" ?
+Ans- This line imports the core React library, which is necessary to use JSX syntax and create React components.
+
+Q) Explain "import ReactDOM from 'react-dom/client'"?
+Ans- ReactDOM is a js library which convert your components (which are written in React syntax) to the actual browser DOM.
+
+Q) Explain "ReactDOM.createRoot(document.getElementById('root')).render"?
+Ans- ) ReactDOM.createRoot: This method creates a root React node that can manage the rendering of React components.
+) document.getElementById('root'): This selects the HTML element with the id of root where the React app will be mounted.
+) render: This method is called to render the specified React elements into the root node.
+
+Q. Explain "<React.StrictMode>"?
+Ans- ) React.StrictMode: A wrapper component that helps in identifying potential problems in the application. It does not render any UI itself but activates additional checks and warnings for its descendants.
+
+Q. What is Virtual DOM or ReactDOM ?
+Ans- ) React creates a in-memory structure called the virtual DOM
+) It's a lightweight representation where each node stands for a component and it's attributes.
+
+) NOTE: React uses a DIFFING algorithm to compare the new virtual DOM tree with the previous one. 
+
+Q. What is Reconciliation Process ?
+Ans- ) When component data changes, React updates the virtual DOM's state to mirror these changes
+) React then compares the current and previous versions of the virtual DOM
+) It identifies the specific nodes that need updating
+) Only these nodes are updated in the real browser DOM, making it efficient.
+
+Q) what is components ?
+Ans- Components are the building blocks of the user interface. They allow developers to break down the UI into reusable, independent pieces
+Components can be either class components or functional components
+1) Functional component
+=> These are simple JavaScript functions that return JSX (JavaScript XML), which describes what the UI should look like. They can accept props as an argument and return React elements
+2) Class component
+=> Class components were the only way to use state and lifecycle methods before Hooks were introduced in React 16.8.
+
+Q) What is State ?
+Ans- ) State is a special object that holds data that may change over the component's lifetime.
+) Functional components use the useState Hook to manage state, while class components use this.state and this.setState.
+
+Q) Difference between props and state ?
+Ans-
+=> Props
+Props are the short form of Properties, are read-only inputs passed from parent component to child component. and provides the data that child component need to render
+Props are immutable in nature means can't be modified by the child component for modifying they need to call callback function with specific request
+Props are in usage for pass data and event handler function from parent to child components.
+
+=> State
+State are the special object that holds data and may change ove the lifespan of the components.
+State is mutable means it can be updated the component who owns it
+State is used to track variables and handle dynamic data that change over time, such as form inputs, visibility toggles, and counters.
+
+=> Key Differences
+Source of Truth: Props are passed down from parent components, while state is managed locally within the component.
+Mutability: Props are immutable and cannot be changed by the receiving component, whereas state can be updated by the component that owns it.
+Responsibility: Props are used to configure a component or pass data, while state is used to handle dynamic data that changes over time within a component.
+
+Q) What is Lifecycle Method ?
+Ans- LIfecycle methods are special method that get called upon on diferent components lifecycle.
+Phases of Component Lifecycle
+=> Mounting: When a component is being created and inserted into the DOM.
+=> Updating: When a component is being re-rendere d based on the changes to props or state.
+=> Unmounting: When a component is being removed from the DOM.
+=> Error Handling: When an error is thrown in a descendant component.
+
+Q) What is JSX ?
+Ans-
+=> JavaScript XML is the extension used by react to write HTML-like code
+=> JSX get converted to regular JS
+=> Babeljs.io/repel is used to transpile JSX syntax into regular JS which browser can understand.
+
+Q) What is transpiler ?
+Ans- It converts source code from one programming language to another.
+
+Q) Advantages of JSX ?
+Ans- => Provide the way of writing HTML in JS 
+=> Improved code redability and writability.
+=> Error checking in advance
+=> Support javascript expressions
+=> Improved performance
+=> Code Reusability
+
+Q) What is Fragments ?
+Ans-  Allows grouping of multiple elements without extra DOM nodes
+) Return multiple elements without a wrapping parent which also provides cleaner DOM
+) Two syntax 
+a) <React.Fragment>....</React.Fragment>
+b) <>...</>
+
+Q. What is props and ways of passing data to props ?
+Ans- ) Props (short for properties) are read-only attributes(immutable) used to pass data and event handlers from a parent component to a child component.
+) Examples of using Props
+a) Passing Multiple Props
+b) Passing Function as Props
+c) Destructuring Props 
+
+Q. Passing Components as children ?
+Ans- ) In React, passing components as children is a common pattern that allows you to compose components in a flexible and reusable way. Here’s an example to illustrate how you can pass components as children and manage them within the parent component.
+) Accessed with props.children
+) Enhances Reusability, Composition, Flexibility
+
+Q. Handling events ?
+Ans- React provides a way to handle user interactions like clicks, form submissions, key presses, and more using event handlers
+) React events use camelCase. Eg.onClick
+) Uses Synthetic events, not direct browser events
+) Use onChange for controlled form inputs
+
+Q. Passing Functions via props ?
+Ans- This allows a parent component to pass a function down to a child component, which can then call the function to trigger an action or update the state in the parent
+) Enables upward communication from child to parent
+) Commonly used for event Handling
+) Parent defines a function, child invokes it
+
+Q) What is prop drilling ?
+Ans- Prop drilling is a process in which we pass the properties down from parent component to the nested child component, drawback point of prop drilling is that even when intermediate component don't requires
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                   HOOKS                                                      
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q) What is hook ?
+Ans- Hooks are special functions in React that let you use state that let us manage component logic without using class components, making your code more readable and reusable.
+
+Q) What is useState()?
+Ans-In react, useState is a hook that lets you add state to functional components, enabling the component to respond to the user input and other changes. It returns an array with two elements: the current state value and a function to update that state.
+
+=> When to use
+updating counter or timer
+managing user input
+toggling UI elements
+
+Eg- const [state, setState] = useState(initialState);
+state is the current state value.
+setState is the function that lets you update the state.
+initialState is the initial value of the state.
+
+Q) What is useRef ?
+Ans-In react, useRef is a hook which allow us to create reference for a DOM element and manipulate DOM directly, which persist across renders without causing a re-render when it's value changes .
+
+=> Syntax
+It returns us a mutable 'ref' object and also we can assign default value here 
+
+=> We can also manipulate the mutable object using current property
+
+Example) 
+function MyComponent() {
+  const myElementRef = useRef(null);
+
+  return <div ref={myElementRef}>Hello, World!</div>;
+}
+
+Q) what is useContext() ?
+Ans- In react, useContext is a hook allow to access the value directly from context within a functional component. It allows you to share data across the component tree without having to pass props down manually at every level.
+
+=> Syntax
+First, you create a context using the createContext function from React
+Provider: Use a context provider to wrap parts of your component tree where you want the context to be available.
+n a descendant component, Use the useContext hook in a functional component to access the context value.
+
+=> When to use useContext
+When you need to share state or functions across multiple components without prop drilling.
+To handle translations and language settings across your application
+to handle authentication across the components
+
+=> Example: const MyContext = createContext();
+
+Example:
+ function MyComponent() {
+  const value = useContext(MyContext);
+
+  return <div>{value}</div>;
+}
+
+Q) What is useEffect() ?
+Ans- In react, useEffect is a hook, that allows you to handle side effects in function components like data fetching, event listeners and timers.
+
+=> Syntax
+Effect function: The first argument of useEffect is a function that contains the side-effect logic. This function is executed after the component renders
+Dependencies array: The second argument is an array of dependencies. The effect will re-run only if one of these dependencies changes.
+Cleanup function: The cleanup function runs before the component is removed from the DOM or before effect re-renders
+                  Common use cases for cleanup include clearing timers, canceling network requests, or unsubscribing from event listeners.
+
+=> When to use useEffect
+useEffect is used to perform side effects in React components. Side effects can include data fetching, subscriptions, Direct DOM manipulations, timers, and logging. 
+
+
+=> Multiple useEffect hooks can be used in a single component for organizing different side effects separately
+
+Q) What is useCallback() ?
+Ans- 
+=> The useCallback hook in React is used to memoize functions, allowing you to avoid unnecessary re-renders of functions when a component re-renders.
+
+=> Syntax
+The useCallback hook takes two arguments:
+The function   you want to memoize to prevent from being recreated on every render.
+A dependency array specifies the values that the function depends on. The function will only re-render if one of these values changes.
+
+=> When to Use useCallback
+Performance Optimization: Use useCallback when you pass functions to components that depend on referential equality (e.g., React.memo).
+Stable Function References: It is particularly useful in conjunction with React.memo or custom hooks that depend on stable function references to avoid unnecessary computations or operations.
+
+=> Example
+ const memoizedCallback = useCallback(() => {
+  // Your callback logic here
+}, [dependencies]);
+
+Q) What is useMemo() ?
+Ans- In react, useMemo is a hook that allows you to caches the result of expensive calculations to avoid re-render so less time consumption by components
+
+=> Syntax
+The useMemo hook takes two arguments
+The function which will compute the expensive or tim=taking calculations and cache it
+Other argument is dependency array specifies the value on which function depends. The function will only re-render if one of these value changes.
+
+=> When to use
+Use useMemo when you have expensive calculations or operations that could affect performance if re-executed unnecessarily by this it improves component performance
+
+=> Comparison with useCallback: While useCallback memoizes functions, useMemo memoizes values or results of functions.
+
+Eg.) const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+
+Q) What is useReducer() ?
+Ans- The useReducer hook is an alternative to useState for managing state in a component. It's particularly useful when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. It is similar to the concept of reducers in Redux.
+=> const [state, dispatch] = useReducer(reducer, initialState);
+
+reducer: A function that determines changes to an application's state. It uses the state and action to compute the new state.
+
+---------------------------------------------------------REACT-ROUTER------------------------------------------------
+
+Q) What is React Router ?
+Ans- React Router is a powerful JS library for handling navigation and routing in React applications. It allows you to define multiple routes in your app and navigate between different components based on the URL. 
+Installation: Use npm install react-router-dom
+
+=> Key features of React Router
+Dynamic Routing: Allows for dynamic and flexible route definitions that can change based on application state
+Nested Routing: Supports nesting routes inside each other, making it easy to build complex UI structures.
+
+Q) What is BroweserRouter ?
+Ans- Introduced in version 4 of react router, BrowserRouter is the standard router component that uses the HTML5 history API to keep your UI in sync with the URL
+Ex)  <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </BrowserRouter>
+
+Q) What is RouterProvider ?
+Ans- Introduced in version 6 of react router, It’s a more powerful and flexible way to configure to create route. Instead of wrapping your routes directly in BrowserRouter, you configure your routes separately and pass them to RouterProvider as prop (createBrowserRouter)
+) createBrowserRouter: helps creating the mapping for router provider.
+
+Ex) const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+    children : [
+      path: '/',
+      element: </About>
+    ]
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
+
+Q) Why to use RouterProvider instead of BrowserRouter ?
+Ans- 
+1. Enhanced Data Loading
+RouterProvider supports data loading at the route level, which means data loading will be completed for your component before renderring 
+
+2. Built-in Error Handling
+RouterProvider includes built-in support for handling errors at the route level, by allowing you to define error handling logic directly in your route configurations
+
+Q) Layout routes
+Ans- 1. Layout Routes help us to use shared elements
+2. Outlet component is used to render the children at the nested routes
+
+Q) Data fetching using loader ?
+Ans- 1. Loader method can be used to load data before a particular route is executed.
+2. The loader method must return the data that is loaded or promise.
+3. Data is available in component and all the child components.
+4. useLoaderData hook can be used to get the fetched data.
+5. Loading state can also be used. 
+
+Q) What is action in react router ?
+Ans- 1. Actions provide a way to handle form submissions and other user actions before the route changes
+2. Custom Form component need to be used along with name attribute for all inputs
+3. Action function will get an data object. To generate correct request object method=“post” attribute should be used.
+4. Data.request.formData() method can be used to get form data Object.
+5. Object.fromEntries(formData) can be used to get actual input data.
+6. redirect() response can be returned for navigation after submission.
+
+---------------------------------------------------------CONTEXT API---------------------------------------------------------
+Q) What is Context API ?
+Ans- It is a built-in feature that allows you to share state and other values between components without having to pass props explicitly through every level of the component tree. 
+
+=> Use cases
+This is especially useful for global data such as user authentication, themes, or settings, which need to be accessed by many components across your application.
+Avoiding prop drilling (passing props through many levels of components).
+
+=> The Context API consists of three main parts:
+1. React.createContext: This will allow us to create the context object, where we can store our states, props or components need to be avaialble global in application.
+2. React.Provider: In Provider, we will wrap the component where we want our context to be available.
+3. React.Consumer: For consumption, we required a hook known as useContext() for accessing the required values in current component.
+
+=> Example
+Toggle between Light and Dark theme in a application, where we want theme to be reflected globally across application is easy to implement using Context API
+
+Q) When to go for react-context ?
+Ans- React Context is well-suited for situations where you have simple or small pieces of state that need to be accessed by multiple components, such as theme toggling, language settings, or user authentication.
+React context should only be used for things that rarely change as 
+
+Q) Difference between React-Context and Redux ?
+Ans- 
+1. React context is suitable for low scale application for sharing simple, non-complex state whereas redux is suitable for large scale application to handle comprehensive state management.
+2. React context is slow in performance because it can have more than one context provider in whereas Redux has great performance cause it's have one store only
+3. React context is relatively simple to use and set-up whereas redux is more complex to set up and understand, requiring knowledge of actions, reducers, and the store
+
+---------------------------------------------------------REDUX---------------------------------------------------------
+Q) What is Redux ?
+Ans-
+Redux is not a in-built library of react and needs to be added as an external dependency, It is a state management tool that is used to manage app-wide state and its suitable for comprohensive state for managing application state that needs to be consistent.
+
+For using a value from store we need to subscribe it, Directly store updation is not possible For updating component need to dispatch a action, that action will be sent to reducer with complete store to update the value in store
+
+=> How redux works
+Single Source: Uses a single central store to maintain the entire application's state.
+Actions: Components never directly change the store. Changes to state are made through dispatched actions, which describe events.Reducers: Actions are processed by reducers, pure functions that return the new state
+Immutable: State is immutable; every change results in a new state object
+-------------------------------------------------------------------------------------------------------------------------
+
+virtual DOM and actual DOM
+2.Features of React
+3.JSX
+4.can our browser directly understand JSX  => No, browsers can't understand JSX code. You need a transpiler to convert your JSX to regular Javascript that browsers can understand. The most widely used transpiler right now is Babel.
+5.webpack
+6.Lifecycle component in react
+7.unmount
+8.refs and props
+9.control and uncontrol component
+10.High order function
+11.state and props
+12.router
+13.server side rendering

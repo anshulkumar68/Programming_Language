@@ -1,0 +1,51 @@
+1) what is node.js
+Ans) node is an open-source runtime environment that allows to run js code outside of browser, typically on server 
+key features:
+a) Asynchronous I/O => Handles multiple tasks without waiting for one to finish uses features like promises, callbacks, async/await
+b) Single threaded => Despite being single-threaded, it can handle thousands of concurrent connections using an event loop.
+c) Open Source => Maintained by a large community, with numerous libraries available via npm (Node Package Manager).
+
+Q) What is express
+Ans)
+
+Q) How to install express
+Ans- 
+=> npm init to initialize the directory as node.js project
+=> npm install express --save
+
+Q) with example
+const express = require('express')
+const app = express()
+const port = 3001
+
+app.get('/', (req, res)=>{
+    res.send('Hello World!')
+})
+
+app.listen(port, ()=>{
+    console.log(server is running on port : ${port});
+})
+Ans) 
+=> const express = require('express')
+This imports the express module into your project. express is a Node.js framework for building web servers and APIs.
+
+=> app.get('/', (req, res) => { res.send('Hello World!') }) 
+app.get() is a method in Express that used to handle GET requests and it accepts two arguments
+The first argument '/' specifies the path of the route
+The second argument is a callback function (called a route handler) that takes two parameters:
+req (request): Contains details of the incoming request, such as query parameters or headers.
+res (response): Used to send back data to the client.
+
+=> res.send('Hello World!')
+sends an HTTP response with the string "Hello World!" to the server
+
+=> app.listen(port, () => { console.log})
+This starts the server and makes it listen for incoming requests on the specified port
+
+Q ) when the file is having another directory than index.js file ?
+Ans- ENOENT - error no entity
+=> res.sendFile(path.join(__dirname, 'index.html'));
+However, based on the structure in the image, the index.html file is located inside the new folder, not directly in the starter folder. Thus, the relative path is incorrect.
+
+CORRECT WAY when a file is stored in another folder
+=> res.sendFile(path.join(__dirname, 'new', 'index.html'));
