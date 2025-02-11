@@ -14,5 +14,3 @@ if reversed_num == num:
     print(f'{num} is palindrome')
 else:
     print(f'{num} is not a palindrome')
-    
-
